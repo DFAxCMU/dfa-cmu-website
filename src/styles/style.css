@@ -1,0 +1,6 @@
+:root {
+    --red: firebrick;
+}
+Nav {
+    background-color: var(--red);
+}
