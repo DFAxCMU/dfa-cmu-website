@@ -1,0 +1,50 @@
+/* import Montserrat */
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
+
+
+/* define variables */
+:root {
+    --accent-color: #c51d2e; /* #c51d2e or #ea9554 */
+    --title: "Montserrat";
+    --title-fallback: sans-serif;
+    --body: Georgia;
+    --body-fallback: serif;
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+/* customize appearance of text */
+h1 {
+    font-family: var(--title), var(--title-fallback);
+}
+
+h2 {
+    font-family: var(--title), var(--title-fallback);
+}
+
+h3 {
+    font-family: var(--title), var(--title-fallback);
+}
+
+h4 {
+    font-family: var(--title), var(--title-fallback);
+}
+
+h5 {
+    font-family: var(--title), var(--title-fallback);
+}
+
+p {
+    font-family: var(--body), var(--body-fallback);
+}
+
+.button {
+    background-color: var(--accent-color);
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-family: var(--title), var(--title-fallback);
+}
