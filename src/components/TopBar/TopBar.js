@@ -8,7 +8,9 @@ import "./style.css";
 export default function TopBar(props) {
     return (
         <div className="top-bar">
-            <p>DFA x CMU LOGO</p>
+            <div className="logo">
+
+            </div>
             <NavBar bg="light" variant="light">
                 <NavBar.Brand href="/">Design for America</NavBar.Brand>
                     <Nav>

@@ -3,7 +3,8 @@
 
 :root {
     /* define variables */
-    --accent-color: #c51d2e; /* #c51d2e or #ea9554 */
+    --accent-color: #ea9554; /* #c51d2e or #ea9554 */
+    --secondary-color: #f8f8f8;
     --title: "Montserrat";
     --title-fallback: sans-serif;
     --body: Georgia;

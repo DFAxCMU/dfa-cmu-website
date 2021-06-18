@@ -58,6 +58,7 @@ const IndexPage = () => {
                 team="Michelle Sun, Spoorthi Cherivirala, Thien Le, Rachel Legg, Robyn Lee"
                 body="dummy text"
             />
+            <div style={{marginBottom: "72px"}}></div>
         </div>
   )
 };

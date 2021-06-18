@@ -3,7 +3,10 @@ import "./style.css";
 
 export default function ProjectCard(props) {
     return (
-        <a href="/ymca-changemakers">
+        <a
+            href="/ymca-changemakers"
+            style={{textDecoration: "none"}}
+        >
             <div className="project-card">
                 <div className="project-img">
 
@@ -12,7 +15,7 @@ export default function ProjectCard(props) {
                     <h2>{ props.title }</h2>
                     <h4>{ props.category }</h4>
                     <h5>{ props.team }</h5>
-                    <p>{ props.body }</p>
+                    <p className="small-body">{ props.body }</p>
                 </div>
             </div>
         </a>
