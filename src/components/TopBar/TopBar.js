@@ -1,7 +1,5 @@
 import React from "react";
-import NavBar from "react-bootstrap/NavBar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavBar, Nav, NavDropdown } from "react-bootstrap";
 import Socials from "../Socials/Socials";
 import "./style.css";
 
