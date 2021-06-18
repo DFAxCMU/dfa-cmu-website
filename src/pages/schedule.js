@@ -5,6 +5,7 @@ const Schedule = () => {
   return (
     <div>
       <TopBar />
+      <div style={{marginBottom: "72px"}}></div>
     </div>
   )
 };

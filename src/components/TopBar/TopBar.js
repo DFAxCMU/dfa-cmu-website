@@ -8,9 +8,11 @@ import "./style.css";
 export default function TopBar(props) {
     return (
         <div className="top-bar">
-            <div className="logo">
+            <a href="/">
+                <div className="logo">
 
-            </div>
+                </div>
+            </a>
             <NavBar bg="light" variant="light">
                 <NavBar.Brand href="/">Design for America</NavBar.Brand>
                     <Nav>
@@ -20,7 +22,7 @@ export default function TopBar(props) {
                             <NavDropdown.Item href="/archived-projects">Archived Projects</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="/schedule">Schedule</Nav.Link>
-                        <Nav.Link href="https://www.impactcmu.com">ImpactCMU</Nav.Link>
+                        <Nav.Link href="https://www.impactcmu.com" target="_blank_">ImpactCMU</Nav.Link>
                     </Nav>
                     <Socials />
             </NavBar>

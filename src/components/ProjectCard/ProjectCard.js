@@ -4,7 +4,7 @@ import "./style.css";
 export default function ProjectCard(props) {
     return (
         <a
-            href="/ymca-changemakers"
+            href={ props.href }
             style={{textDecoration: "none"}}
         >
             <div className="project-card">
