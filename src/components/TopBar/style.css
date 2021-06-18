@@ -8,13 +8,18 @@
     height: 160px;
 }
 
-Nav {
+.nav-bar {
     font-family: var(--title), var(--title-fallback);
     font-weight: bold;
     font-size: 20px;
 }
 
-Nav a {
+.nav-link {
+    text-decoration: white;
+    color: black;
+}
+
+.dropdown-item {
     text-decoration: none;
     color: black;
 }

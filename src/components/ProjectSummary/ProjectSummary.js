@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css";
 
 export default function ProjectCard(props) {
-    /* interpret array of team roles */
-    const teamRoles = [];
-    const lines = props.team.map(arr => arr[0] + ": " + arr[1]);
+    // replace \n in the string with <br />
+    const addedBreaks = [];
+    const lines = props.team.split("\n");
     for (let line of lines) {
-        teamRoles.push(line);
-        teamRoles.push(<br />);
+        addedBreaks.push(line);
+        addedBreaks.push(<br />);
     }
 
     return (
@@ -15,7 +15,7 @@ export default function ProjectCard(props) {
             <h3>Description</h3>
             <p>{ props.description }</p>
             <h3>Team</h3>
-            <p>{ teamRoles }</p>
+            <p>{ addedBreaks }</p>
             <h3>Community Partner</h3>
             <p>{ props.partner }</p>
             <h3>Timeline</h3>

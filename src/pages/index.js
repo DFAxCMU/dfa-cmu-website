@@ -51,7 +51,7 @@ const IndexPage = () => {
                     text="D-List Sign Up"
                     href="https://www.google.com"
                     height="35"
-                    width="250"
+                    width="250px"
                 />
             </AlignedSection>
             <Divider />
@@ -109,13 +109,13 @@ const IndexPage = () => {
                 text="D-List Sign Up"
                 href="https://www.google.com"
                 height="130"
-                width="360"
+                width="360px"
             />
             <Button
                 text="Erica's Email"
                 href="https://www.google.com"
                 height="130"
-                width="360"
+                width="360px"
             />
             <Socials />
             <div style={{marginBottom: "72px"}}></div>

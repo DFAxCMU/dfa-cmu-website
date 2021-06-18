@@ -4,7 +4,7 @@ import "./style.css";
 export default function Button(props) {
     const customButton = {
         height: props.height + "px",
-        width: props.width + "px"
+        width: props.width
     };
     const customHeading = {
         marginTop: "0px",
