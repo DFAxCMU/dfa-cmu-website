@@ -3,6 +3,7 @@ import NavBar from "react-bootstrap/NavBar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Socials from "../Socials/Socials";
+import "./style.css";
 
 export default function TopBar(props) {
     return (

@@ -1,14 +1,19 @@
 /* import Montserrat */
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap);
 
-
-/* define variables */
 :root {
+    /* define variables */
     --accent-color: #c51d2e; /* #c51d2e or #ea9554 */
     --title: "Montserrat";
     --title-fallback: sans-serif;
     --body: Georgia;
     --body-fallback: serif;
+
+    /* universal properties */
+    margin-left: 72px;
+    margin-right: 72px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .accent {
@@ -18,33 +23,44 @@
 /* customize appearance of text */
 h1 {
     font-family: var(--title), var(--title-fallback);
+    font-size: 72px;
+    font-weight: bolder;
 }
 
 h2 {
     font-family: var(--title), var(--title-fallback);
+    font-size: 48px;
+    font-weight: bold;
 }
 
 h3 {
     font-family: var(--title), var(--title-fallback);
+    font-size: 24px;
+    font-weight: bold;
 }
 
 h4 {
     font-family: var(--title), var(--title-fallback);
+    font-weight: normal;
+    font-size: 20px;
 }
 
 h5 {
     font-family: var(--title), var(--title-fallback);
+    font-weight: lighter;
+    font-size: 14px;
 }
 
 p {
     font-family: var(--body), var(--body-fallback);
+    font-size: 18px;
 }
 
-.button {
-    background-color: var(--accent-color);
-    width: 30%;
-    height: 50px;
-    text-align: center;
-    color: white;
-    font-family: var(--title), var(--title-fallback);
+.small-body {
+    font-size: 14px;
+}
+
+.small-margin {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

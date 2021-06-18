@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 export default function Profile(props) {
     return (
@@ -7,10 +8,10 @@ export default function Profile(props) {
 
             </div>
             <div className="profile-text">
-                <h3 className="accent">{ props.role }</h3>
-                <h3>{ props.name }</h3>
-                <h4>{ props.class }</h4>
-                <h4>{ props.major }</h4>
+                <h4 className="accent"><b>{ props.role }</b></h4>
+                <h4><b>{ props.name }</b></h4>
+                <h5><b>{ props.class }</b></h5>
+                <h5><b>{ props.major }</b></h5>
             </div>
         </div>
     );

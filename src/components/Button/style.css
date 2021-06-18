@@ -1,0 +1,6 @@
+.button {
+    background-color: var(--accent-color);
+    text-align: center;
+    color: white;
+    line-height: 2;
+}

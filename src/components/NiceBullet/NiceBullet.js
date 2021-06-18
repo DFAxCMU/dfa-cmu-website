@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 export default function NiceBullet(props) {
     return (
@@ -8,7 +9,7 @@ export default function NiceBullet(props) {
             </div>
             <div className="bullet-text">
                 <h3 className="accent">{ props.title }</h3>
-                <p>{ props.body }</p>
+                <p className="small-body">{ props.body }</p>
             </div>
         </div>
     );
