@@ -113,7 +113,7 @@ const IndexPage = () => {
             />
             <Button
                 text="Erica's Email"
-                href="https://www.google.com"
+                href="mailto:efu@andrew.cmu.edu"
                 height="130"
                 width="360px"
             />

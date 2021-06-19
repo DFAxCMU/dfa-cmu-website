@@ -19,9 +19,9 @@ TODO: make compatible with graphql so the following info can be acquired:
 - recruitment text ("recruitment")
 - contact (first entry: name of button. second entry: href)
 - folder (the folder in images that will hold...
-        - a file called poster.png
-        - a folder called final, containing 1, 2, or 4 images
-        - a folder called sketches, containing 1, 2, or 4 images
+        - a folder called display, containing 1-2 images/videos
+        - a folder called final, containing 1-4 images/videos
+        - a folder called sketches, containing 1-4 images/videos
     )
 
 TODO: also store in graphql the lists of projects
@@ -72,7 +72,7 @@ export default function MkProjectPage(props) {
             >
                 <Button
                     text={ props.info.contact[0] }
-                    href={ props.info.contact[1] }
+                    href={ "mailto:" + props.info.contact[1] }
                     height="60"
                     width="100%"
                 />

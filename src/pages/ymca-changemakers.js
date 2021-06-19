@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import MkProjectPage from "../components/MkProjectPage/MkProjectPage";
 
 const info = {
@@ -11,13 +12,36 @@ const info = {
   final: "The Changemaker Challenge, a half-day event where students collaborate with like-minded peers and non-profit organizations on a community project. In doing so, the team hopes teens gain access to social good groups and connect with other teens that share their interests.",
   sketches: "Looking at past projects, we targeted \"How Can We?\" questions and qualifications that we want our solution to have in order to come up with our own new prototype.",
   recruitment: "We are looking for anyone interested in learning how to involve kids in impacting their community. If you are interested in this, community involvement, or have particular skillsets in experience design or drawing, contact our team lead Michelle Sun.",
-  contact: ["Michelle's Email", "https://www.google.com"]
+  contactLbl: "Michelle's Email",
+  contactEmail: "michells@andrew.cmu.edu"
 }
 
 const Changemakers = () => {
-    return (
+  return (
+    <div>
       <MkProjectPage info={ info } />
-    )
-  };
+    </div>
+  );
+};
   
-  export default Changemakers;
+export default Changemakers;
+export const query = graphql`
+  allTestCsv {
+    edges {
+      node {
+        title
+        timeline
+        category
+        description
+        team
+        partner
+        final
+        sketches
+        recruitment
+        contactLbl
+        contactEmail
+        folder
+      }
+    }
+  }
+`;
