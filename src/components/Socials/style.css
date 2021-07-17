@@ -1,6 +1,10 @@
 .socials-img {
-    background-color: black;
+    color: black;
     width: 25px;
     height: 25px;
     margin-top: 10px;
+}
+
+.socials-img:hover {
+    color: var(--accent-color);
 }

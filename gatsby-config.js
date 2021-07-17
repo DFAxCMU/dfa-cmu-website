@@ -8,11 +8,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "data",
-        path: `${__dirname}/src/data`,
-        ignore: [`**/\.`]
+        path: `${__dirname}/src/data`
       }
     },
-    "gatsby-transformer-csv",
-    "gatsby-transformer-json"
+    {
+      resolve: "gatsby-transformer-csv",
+      options: {
+        nodePerFile: false
+      }
+    }
   ],
 };

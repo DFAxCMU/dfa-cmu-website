@@ -5,6 +5,7 @@ import AlignedSection from "../AlignedSection/AlignedSection";
 import ProjectTitle from "../ProjectTitle/ProjectTitle.js";
 import ProjectSummary from "../ProjectSummary/ProjectSummary.js";
 import Button from "../Button/Button";
+import "./style.css";
 
 /*
 TODO: make compatible with graphql so the following info can be acquired:
@@ -71,14 +72,14 @@ export default function MkProjectPage(props) {
                 body={ props.info.recruitment }
             >
                 <Button
-                    text={ props.info.contact[0] }
-                    href={ "mailto:" + props.info.contact[1] }
+                    text={ props.info.contactLbl }
+                    href={ "mailto:" + props.info.contactEmail }
                     height="60"
                     width="100%"
                 />
                 <Button
                     text="DFA D-List Sign Up"
-                    href="https://www.google.com"
+                    href="https://forms.gle/6WQ7a9FkK64cTUZk9"
                     height="60"
                     width="100%"
                 />

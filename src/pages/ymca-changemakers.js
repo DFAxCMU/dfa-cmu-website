@@ -16,32 +16,37 @@ const info = {
   contactEmail: "michells@andrew.cmu.edu"
 }
 
-const Changemakers = () => {
+      //{ data.allArchivedProjects.edges.map(node => <MkProjectPage info={ info } />)}
+const Changemakers = ({ data }) => {
   return (
     <div>
-      <MkProjectPage info={ info } />
+      <MkProjectPage info={ info} />
     </div>
   );
 };
   
 export default Changemakers;
+/*
 export const query = graphql`
-  allTestCsv {
-    edges {
-      node {
-        title
-        timeline
-        category
-        description
-        team
-        partner
-        final
-        sketches
-        recruitment
-        contactLbl
-        contactEmail
-        folder
+  query Query {
+    allArchivedProjects {
+      edges {
+        node {
+          title
+          timeline
+          category
+          description
+          team
+          partner
+          final
+          sketches
+          recruitment
+          contactLbl
+          contactEmail
+          folder
+        }
       }
     }
   }
 `;
+*/

@@ -27,7 +27,3 @@ export default function TopBar(props) {
         </div>
     );
 }
-/*
-            <NavBar bg="light" variant="light">
-            </NavBar>
-            */
