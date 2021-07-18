@@ -11,7 +11,7 @@ const CurrentProjects = () => {
         title="YMCA Changemakers"
         category="Social Impact and Community Engagement"
         team="Michelle Sun, Spoorthi Cherivirala, Thien Le, Rachel Legg, Robyn Lee"
-        body=""
+        body= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
       />
       <div style={{marginBottom: "72px"}}></div>
     </div>

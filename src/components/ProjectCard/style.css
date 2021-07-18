@@ -1,15 +1,29 @@
 .project-card {
-    background-color: var(--secondary-color);
-    border-radius: 35px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  background-color: var(--secondary-color);
+  border-radius: 35px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*margin-left: 20px; */
+  padding: 30px;
 }
 
 .project-img {
-    background-color: black;
-    width: 350px;
-    height: 200px;
+  background-color: black;
+  width: 350px;
+  height: 200px;
+  border-radius: 35px;
 }
 
 .project-text {
-    color: black;
+  color: black;
+  margin-left: 40px;
+  line-height: 6px;
+}
+
+.small-body {
+  line-height: 20px;
+}
+
+h2 {
+  color: var(--accent-color);
 }
