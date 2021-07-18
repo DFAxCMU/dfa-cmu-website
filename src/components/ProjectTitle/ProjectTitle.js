@@ -4,7 +4,7 @@ import "./style.css";
 export default function ProjectTitle(props) {
     // replace \n in the string with <br />
     const addedBreaks = [];
-    const lines = props.title.split("\n");
+    const lines = props.title.split("\\n");
     for (let line of lines) {
         addedBreaks.push(line);
         addedBreaks.push(<br />);

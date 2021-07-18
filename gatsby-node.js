@@ -25,8 +25,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     `;
     createTypes(typeDefs);
 };
-const { createFilePath } = require("gatsby-source-filesystem");
-
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     const slug = createFilePath({ node, getNode, basePath: `pages` });
@@ -73,3 +71,45 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 }
 */
+
+const path = require("path");
+
+exports.createPages = ({ graphql, actions }) => {
+    const { createPage } = actions;
+    const ProjectPage = path.resolve(`src/components/MkProjectPage/MkProjectPage.js`);
+
+    return new Promise((resolve, reject) => {
+        resolve(
+            graphql(
+                `{
+                    projects: allProjectInfoCsv {
+                        edges {
+                            node {
+                                title
+                                timeline
+                                category
+                                description
+                                team
+                                partner
+                                final
+                                sketches
+                                recruitment
+                                contactLbl
+                                contactEmail
+                                folder
+                            }
+                        }
+                    }
+                }`
+            ).then(result => {
+                result.data.projects.edges.forEach(edge => {
+                    createPage({
+                        path: `${edge.node.folder}`,
+                        component: ProjectPage,
+                        context: edge.node
+                    })
+                })
+            })
+        )
+    })
+};
