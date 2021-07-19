@@ -12,6 +12,7 @@
 
 .join-buttons {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .profile-box {
@@ -22,4 +23,5 @@
 
 .contact-box {
     display: flex;
+    flex-wrap: wrap;
 }

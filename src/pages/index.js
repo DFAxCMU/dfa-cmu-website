@@ -115,7 +115,7 @@ const IndexPage = () => {
                     width="360px"
                 />
             </div>
-                <Socials />
+            <Socials />
             <div style={{marginBottom: "72px"}}></div>
         </div>
   )

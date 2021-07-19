@@ -8,34 +8,25 @@ import Button from "../Button/Button";
 import "./style.css";
 
 /*
-TODO: make compatible with graphql so the following info can be acquired:
-- title
-- timeline
-- category
-- description
-- team (in array format, have to change setup if not possible)
-- partner
-- final design text ("final")
-- sketches and idea explorations text ("sketches")
-- recruitment text ("recruitment")
 - contact (first entry: name of button. second entry: href)
 - folder (the folder in images that will hold...
         - a folder called display, containing 1-2 images/videos
         - a folder called final, containing 1-4 images/videos
         - a folder called sketches, containing 1-4 images/videos
     )
-
-TODO: also store in graphql the lists of projects
 */
 export default function MkProjectPage({ pageContext }) {
     return (
-        <div>
+        <div className="project-page">
             <TopBar />
             <ProjectTitle
                 title={ pageContext.title }
                 timeline={ pageContext.timeline }
                 category={ pageContext.category }
             />
+            <div className="project-poster">
+
+            </div>
             <Divider />
             <AlignedSection
                 hasCoverImage={ false }
@@ -55,7 +46,6 @@ export default function MkProjectPage({ pageContext }) {
                 title="Final Design"
                 body={ pageContext.final }
             >
-
             </AlignedSection>
             <Divider />
             <AlignedSection
@@ -63,7 +53,6 @@ export default function MkProjectPage({ pageContext }) {
                 title="Sketches and Idea Explorations"
                 body={ pageContext.sketches }
             >
-
             </AlignedSection>
             { pageContext.recruitment ?
                 <div>

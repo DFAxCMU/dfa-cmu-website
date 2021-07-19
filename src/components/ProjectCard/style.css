@@ -22,7 +22,7 @@
   /* overflow: wrap; */
 }
 
-.small-body {
+.project-card .small-body {
   line-height: 20px;
   margin-top: 20px;
 }
