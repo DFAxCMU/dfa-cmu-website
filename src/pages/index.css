@@ -1,0 +1,25 @@
+#index > .aligned-section > .right-section > p {
+    margin-bottom: 50px;
+}
+
+#index > .aligned-section > .right-section > p > a {
+    color: black;
+}
+
+#index > .aligned-section > .right-section > p > a:hover {
+    color: var(--accent-color);
+}
+
+.join-buttons {
+    display: flex;
+}
+
+.profile-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-box {
+    display: flex;
+}

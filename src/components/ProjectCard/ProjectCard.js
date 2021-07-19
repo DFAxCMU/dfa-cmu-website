@@ -13,7 +13,7 @@ export default function ProjectCard(props) {
 
                 </div>
                 <div className="project-text">
-                    <h2>{ props.title }</h2>
+                    <h2 className="accent">{ props.title }</h2>
                     <h4>{ props.category }</h4>
                     <h5>{ props.team }</h5>
                     <p className="small-body">{ props.body }</p>

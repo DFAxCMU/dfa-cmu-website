@@ -10,7 +10,7 @@ const ArchivedProjects = ({ data }) => {
     <div className="project-box">
       { data.allArchivedSummaryCsv.edges.map(edge => {
         return (<ProjectCard
-          id={ edge.node.ID }
+          key={ edge.node.ID }
           href={ "/" + edge.node.ID }
           title={ edge.node.title }
           category={ edge.node.category }
