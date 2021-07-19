@@ -8,10 +8,10 @@ export default function Profile(props) {
 
             </div>
             <div className="profile-text">
-                <h4 className="accent"><b>{ props.role }</b></h4>
-                <h4><b>{ props.name }</b></h4>
-                <h5><b>{ props.class }</b></h5>
-                <h5><b>{ props.major }</b></h5>
+                <h4 className="accent role-text"><b>{ props.role }</b></h4>
+                <h4 className = "name-text"><b>{ props.name }</b></h4>
+                <h5 className = "class-text"><b>{ props.class }</b></h5>
+                <h5 className = "major-text"><b>{ props.major }</b></h5>
             </div>
         </div>
     );
