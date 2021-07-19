@@ -4,6 +4,7 @@ import "./style.css";
 export default function ProjectCard(props) {
     return (
         <a
+            id={ props.id }
             href={ props.href }
             style={{textDecoration: "none"}}
         >

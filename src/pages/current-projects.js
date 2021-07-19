@@ -6,13 +6,7 @@ const CurrentProjects = () => {
   return (
     <div>
       <TopBar />
-      <ProjectCard
-        href="/ymca-changemakers"
-        title="YMCA Changemakers"
-        category="Social Impact and Community Engagement"
-        team="Michelle Sun, Spoorthi Cherivirala, Thien Le, Rachel Legg, Robyn Lee"
-        body=""
-      />
+      <h2 style={{textAlign: "center"}}>Coming Soon!</h2>
       <div style={{marginBottom: "72px"}}></div>
     </div>
   )
