@@ -27,14 +27,14 @@ TODO: make compatible with graphql so the following info can be acquired:
 
 TODO: also store in graphql the lists of projects
 */
-export default function MkProjectPage(props) {
+export default function MkProjectPage({ pageContext }) {
     return (
         <div>
             <TopBar />
             <ProjectTitle
-                title={ props.info.title }
-                timeline={ props.info.timeline }
-                category={ props.info.category }
+                title={ pageContext.title }
+                timeline={ pageContext.timeline }
+                category={ pageContext.category }
             />
             <Divider />
             <AlignedSection
@@ -43,17 +43,17 @@ export default function MkProjectPage(props) {
                 body=""
             >
                 <ProjectSummary
-                    description={ props.info.description }
-                    team={ props.info.team }
-                    partner={ props.info.partner }
-                    timeline={ props.info.timeline }
+                    description={ pageContext.description }
+                    team={ pageContext.team }
+                    partner={ pageContext.partner }
+                    timeline={ pageContext.timeline }
                 />
             </AlignedSection>
             <Divider />
             <AlignedSection
                 hasCoverImage={ false }
                 title="Final Design"
-                body={ props.info.final }
+                body={ pageContext.final }
             >
 
             </AlignedSection>
@@ -61,29 +61,35 @@ export default function MkProjectPage(props) {
             <AlignedSection
                 hasCoverImage={ false }
                 title="Sketches and Idea Explorations"
-                body={ props.info.sketches }
+                body={ pageContext.sketches }
             >
 
             </AlignedSection>
-            <Divider />
-            <AlignedSection
-                hasCoverImage={ false }
-                title="Want to Join?"
-                body={ props.info.recruitment }
-            >
-                <Button
-                    text={ props.info.contactLbl }
-                    href={ "mailto:" + props.info.contactEmail }
-                    height="60"
-                    width="100%"
-                />
-                <Button
-                    text="DFA D-List Sign Up"
-                    href="https://forms.gle/6WQ7a9FkK64cTUZk9"
-                    height="60"
-                    width="100%"
-                />
-            </AlignedSection>
+            { pageContext.recruitment ?
+                <div>
+                    <Divider />
+                    <AlignedSection
+                        hasCoverImage={ false }
+                        title="Want to Join?"
+                        body={ pageContext.recruitment }
+                    >
+                            <Button
+                                text={ pageContext.contactLbl }
+                                href={ "mailto:" + pageContext.contactEmail }
+                                height="60"
+                                width="100%"
+                            />
+                        <Button
+                            text="DFA D-List Sign Up"
+                            href="https://forms.gle/6WQ7a9FkK64cTUZk9"
+                            height="60"
+                            width="100%"
+                        />
+                    </AlignedSection>
+                </div>
+                :
+                <div></div>
+            }
             <div style={{marginBottom: "72px"}}></div>
         </div>
     );
