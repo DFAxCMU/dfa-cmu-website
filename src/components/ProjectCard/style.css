@@ -5,11 +5,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /*margin-left: 20px; */
   padding: 30px;
+  margin: 50px 0px;
 }
 
 .project-img {
   background-color: black;
-  width: 350px;
+  flex: 0 0 200px;
   height: 200px;
   border-radius: 35px;
 }
@@ -18,8 +19,26 @@
   color: black;
   margin-left: 40px;
   line-height: 6px;
+  /* overflow: wrap; */
 }
 
 .small-body {
   line-height: 20px;
+  margin-top: 20px;
+}
+
+.project-card h2 {
+  color: var(--accent-color);
+  line-height: 45px;
+  margin: 10px 0px;
+}
+
+.project-card h4 {
+  line-height: normal;
+  margin: 10px 0px;
+}
+
+.project-card h5 {
+  line-height: normal;
+  margin: 10px 0px;
 }
