@@ -52,36 +52,39 @@ const IndexPage = () => {
             </AlignedSection>
             <Divider />
             <h2><span className="accent">Executive</span> Board</h2>
-            <Profile
-                role="President"
-                name="Erica Fu"
-                class="Sophomore"
-                major="Information Systems"
-            />
-            <Profile
-                role="PR Chair"
-                name="Crystal Lee"
-                class="Junior"
-                major="Computer Science"
-            />
-            <Profile
-                role="Technology Chair"
-                name="Kelly Wang"
-                class="Junior"
-                major="Computer Science"
-            />
-            <Profile
-                role="Project Manager"
-                name="Spoorthi Cherivirala"
-                class="Sophomore"
-                major="Computer Science &amp; Design"
-            />
-            <Profile
-                role="Design Chair"
-                name="Thien Le"
-                class="Sophomore"
-                major="Design"
-            />
+            <div className="profiles">
+                <Profile
+                    role="President"
+                    name="Erica Fu"
+                    class="Sophomore"
+                    major="Information Systems"
+                />
+                <Profile
+                    role="PR Chair"
+                    name="Crystal Lee"
+                    class="Junior"
+                    major="Computer Science"
+                />
+                <Profile
+                    role="Technology Chair"
+                    name="Kelly Wang"
+                    class="Junior"
+                    major="Computer Science"
+                />
+                <Profile
+                    role="Project Manager"
+                    name="Spoorthi Cherivirala"
+                    class="Sophomore"
+                    major="Computer Science &amp; Design"
+                />
+                <Profile
+                    role="Design Chair"
+                    name="Thien Le"
+                    class="Sophomore"
+                    major="Design"
+                />
+            </div>
+            
             <Divider />
             <h2><span className="accent">Community</span> Partners</h2>
             <div style={ communityStyles }>

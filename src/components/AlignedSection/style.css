@@ -7,6 +7,12 @@
         width: 50%;
         padding: 20px;
     }
+    .left-section {
+        width:40%;
+    }
+    .right-section {
+        width: 60%;
+    }
 }
 
 @media screen and (min-width: 400px) {

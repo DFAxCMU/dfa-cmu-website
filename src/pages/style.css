@@ -65,3 +65,13 @@ p {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.profiles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .project-box {
+    margin: 50px 0px 0px 0px;
+} */
