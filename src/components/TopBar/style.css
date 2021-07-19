@@ -11,7 +11,6 @@
     font-family: var(--title), var(--title-fallback);
     font-weight: bold;
     font-size: 20px;
-    /* height: 80px; */
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -20,10 +19,8 @@
 .nav-pages {
     display: flex;
     justify-content: space-around;
-    /* color: black; */
     flex-basis:100%;
     flex-grow:1;
-    /* align-items:center */
     padding:0;
     margin:0;
 }
@@ -32,12 +29,10 @@
     text-decoration: none;
     color: black;
     font-family: var(--title), var(--title-fallback);
-
-    /* display: flex;
-    flex-direction: column; */
 }
 
 /* bootstrap styling */
+/* commented out useless ones */
 /* .nav{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;align-items:flex-end} */
 .nav-link{display:block;padding:.5rem 1rem;color:#000000;text-decoration:none;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out}
 @media (prefers-reduced-motion:reduce){.nav-link{transition:none}}

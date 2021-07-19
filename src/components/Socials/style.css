@@ -1,15 +1,6 @@
 .socials {
-    /* display: flex;
-    justify-content: space-between; */
-    /* position:absolute; */
     display:flex;
-    /* flex-wrap:wrap; */
-    /* align-items:center;
-    justify-content:space-between; */
-    /* padding-top:.5rem;
-    padding-bottom:.5rem; */
     justify-content:flex-end;
-    /* padding: .5rem; */
 }
 
 .socials-img {
