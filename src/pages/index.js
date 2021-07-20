@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
                 <p>Design For America x CMU is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways. </p>
                 <NiceBullet
                     title="Human-Centered Design"
-                    body={ <p>
+                    body={ <p className="highlight-link">
                         As a chapter of national DFA, we empathize and work with our users as we research, ideate, prototype, test and develop solutions. Learn more about the human-centered design process&nbsp;
                         <a target="_blank_" href="https://guides.loft.io/dfa-design/">here</a>.
                     </p>}
@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
                 />
                 <NiceBullet
                     title="Social Good"
-                    body={ <p>
+                    body={ <p className="highlight-link">
                         Student-led teams partner closely with local community organizations to identify challenging social issues to design and develop comprehensive solutions that benefit the broader community. We tackle extraordinary challenges in health, economy, education, and environment. Learn more about our community partners&nbsp;
                         <a href="/#partners">here</a>.
                     </p>}

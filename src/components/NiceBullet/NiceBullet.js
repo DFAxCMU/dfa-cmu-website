@@ -9,7 +9,7 @@ export default function NiceBullet(props) {
             </div>
             <div className="bullet-text">
                 <h3 className="accent">{ props.title }</h3>
-                <p>{ props.body }</p>
+                { typeof props.body === "string" ? <p>{ props.body }</p> : props.body }
             </div>
         </div>
     );
