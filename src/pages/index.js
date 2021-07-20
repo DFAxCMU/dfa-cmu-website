@@ -6,16 +6,9 @@ import Divider from "../components/Divider/Divider";
 import Profile from "../components/Profile/Profile";
 import AlignedSection from "../components/AlignedSection/AlignedSection";
 import Button from "../components/Button/Button";
+import { graphql } from "gatsby";
 import "./style.css";
 import "./index.css";
-import ericaImg from "../images/misc/erica.jpeg";
-import crystalImg from "../images/misc/crystal.jpg";
-import kellyImg from "../images/misc/kelly.jpg";
-import spoorthiImg from "../images/misc/spoorthi.jpg";
-import thienImg from "../images/misc/thien.jpg";
-import bullet1 from "../images/misc/bullet1.png";
-import bullet2 from "../images/misc/bullet2.png";
-import bullet3 from "../images/misc/bullet3.png";
 
 const communityStyles = {
     backgroundColor: "white",
@@ -24,7 +17,7 @@ const communityStyles = {
     marginTop: "10px"
 };
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
     return (
         <div id="index">
             <TopBar />
@@ -36,17 +29,17 @@ const IndexPage = () => {
                 <NiceBullet
                     title="Human-Centered Design"
                     body="As a chapter of national DFA, we empathize and work with our users as we research, ideate, prototype, test and develop solutions. "
-                    src={ bullet1 }
+                    src={ data.b1.childImageSharp.fixed.src }
                 />
                 <NiceBullet
                     title="Collaboration"
                     body="By collaborating in teams of students with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity."
-                    src={ bullet2 }
+                    src={ data.b2.childImageSharp.fixed.src }
                 />
                 <NiceBullet
                     title="Social Good"
                     body="Student-led teams partner closely with local community organizations to identify challenging social issues to design and develop comprehensive solutions that benefit the broader community. We tackle extraordinary challenges in health, economy, education, and environment. "
-                    src={ bullet3 }
+                    src={ data.b3.childImageSharp.fixed.src }
                 />
                 <p>
                     <a target="_blank_" href="https://guides.loft.io/dfa-design/">Learn more about the human-centered design process</a> or <a href="/#partners">Learn more about our community partners</a>.
@@ -81,35 +74,35 @@ const IndexPage = () => {
                     name="Erica Fu"
                     class="Sophomore"
                     major="Information Systems"
-                    src={ ericaImg }
+                    src={ data.erica.childImageSharp.fixed.src }
                 />
                 <Profile
                     role="PR Chair"
                     name="Crystal Lee"
                     class="Junior"
                     major="Computer Science"
-                    src={ crystalImg }
+                    src={ data.crystal.childImageSharp.fixed.src }
                 />
                 <Profile
                     role="Technology Chair"
                     name="Kelly Wang"
                     class="Junior"
                     major="Computer Science"
-                    src={ kellyImg }
+                    src={ data.kelly.childImageSharp.fixed.src }
                 />
                 <Profile
                     role="Project Manager"
                     name="Spoorthi Cherivirala"
                     class="Sophomore"
                     major="Computer Science &amp; Design"
-                    src={ spoorthiImg }
+                    src={ data.spoorthi.childImageSharp.fixed.src }
                 />
                 <Profile
                     role="Design Chair"
                     name="Thien Le"
                     class="Sophomore"
                     major="Design"
-                    src={ thienImg }
+                    src={ data.thien.childImageSharp.fixed.src }
                 />
             </div>
             <Divider />
@@ -138,3 +131,64 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+  export const query = graphql`
+    query IndexQuery {
+      erica: file(relativePath: {eq: "misc/erica.jpeg"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+      crystal: file(relativePath: {eq: "misc/crystal.jpg"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+      kelly: file(relativePath: {eq: "misc/kelly.jpg"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+      spoorthi: file(relativePath: {eq: "misc/spoorthi.jpg"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+      thien: file(relativePath: {eq: "misc/thien.jpg"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+      b1: file(relativePath: {eq: "misc/bullet1.png"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+      b2: file(relativePath: {eq: "misc/bullet2.png"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+      b3: file(relativePath: {eq: "misc/bullet3.png"}) {
+          childImageSharp {
+              fixed {
+                  src
+              }
+          }
+      }
+    }
+  `

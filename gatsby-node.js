@@ -100,14 +100,33 @@ exports.createPages = ({ graphql, actions }) => {
                             }
                         }
                     }
+                    images: allFile(filter: {ext: {ne: ".csv"}}) {
+                        projects: group(field: relativeDirectory) {
+                            dir: fieldValue
+                            edges {
+                                node {
+                                    childImageSharp {
+                                        gatsbyImageData(height: 800)
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }`
             ).then(result => {
                 result.data.projects.edges.forEach(edge => {
+                    const projectImgs = result.data.images.projects.find((group, index) => {
+                        if(group.dir === edge.node.folder)
+                            return true;
+                    });
                     createPage({
                         path: `${edge.node.folder}`,
                         component: ProjectPage,
-                        context: edge.node
-                    })
+                        context: {
+                            info: edge.node,
+                            images: projectImgs
+                        }
+                    });
                 })
             })
         )

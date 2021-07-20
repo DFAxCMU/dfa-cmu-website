@@ -1,4 +1,16 @@
 .project-poster {
-    background-color: var(--accent-color);
+    display: flex;
     height: 800px;
+    width: 100%;
+    justify-content: center;
+}
+
+.project-page .project-poster img {
+    height: 100%;
+    width: initial;
+}
+
+.project-page .aligned-section img {
+    width: 100%;
+    height: initial;
 }

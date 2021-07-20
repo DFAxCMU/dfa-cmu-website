@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import cover from "../../images/ymca-changemakers/cover.jpeg";
 
 export default function ProjectCard(props) {
     return (
@@ -10,7 +9,7 @@ export default function ProjectCard(props) {
         >
             <div className="project-card">
                 <div className="project-img">
-                    <img src={ cover } alt="" />
+                    <img src={ props.coverImg } alt="" />
                 </div>
                 <div className="project-text">
                     <h2 className="accent">{ props.title }</h2>

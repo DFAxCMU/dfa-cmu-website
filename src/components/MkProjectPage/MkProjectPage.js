@@ -6,21 +6,23 @@ import ProjectTitle from "../ProjectTitle/ProjectTitle.js";
 import ProjectSummary from "../ProjectSummary/ProjectSummary.js";
 import Button from "../Button/Button";
 import "./style.css";
-import poster from "../../images/ymca-changemakers/poster.png";
-import final from "../../images/ymca-changemakers/final.png";
-import sketches from "../../images/ymca-changemakers/sketches.png";
 
 export default function MkProjectPage({ pageContext }) {
+    const imgList = pageContext.images.edges.map(edge => edge.node.childImageSharp.gatsbyImageData.images.fallback.src);
+    const posterPath = imgList.find((path, index) => path.includes("poster"));
+    const finalPath = imgList.find((path, index) => path.includes("final"));
+    const sketchesPath = imgList.find((path, index) => path.includes("sketches"));
+
     return (
         <div className="project-page">
             <TopBar />
             <ProjectTitle
-                title={ pageContext.title }
-                timeline={ pageContext.timeline }
-                category={ pageContext.category }
+                title={ pageContext.info.title }
+                timeline={ pageContext.info.timeline }
+                category={ pageContext.info.category }
             />
             <div className="project-poster">
-                <img src={ poster } alt="" />
+                <img src={ posterPath } alt="" />
             </div>
             <Divider />
             <AlignedSection
@@ -29,39 +31,39 @@ export default function MkProjectPage({ pageContext }) {
                 body=""
             >
                 <ProjectSummary
-                    description={ pageContext.description }
-                    team={ pageContext.team }
-                    partner={ pageContext.partner }
-                    timeline={ pageContext.timeline }
+                    description={ pageContext.info.description }
+                    team={ pageContext.info.team }
+                    partner={ pageContext.info.partner }
+                    timeline={ pageContext.info.timeline }
                 />
             </AlignedSection>
             <Divider />
             <AlignedSection
                 hasCoverImage={ false }
                 title="Final Design"
-                body={ pageContext.final }
+                body={ pageContext.info.final }
             >
-                <img src={ final } alt="" />
+                <img src={ finalPath } alt="" />
             </AlignedSection>
             <Divider />
             <AlignedSection
                 hasCoverImage={ false }
                 title="Sketches and Idea Explorations"
-                body={ pageContext.sketches }
+                body={ pageContext.info.sketches }
             >
-                <img src={ sketches } alt="" />
+                <img src={ sketchesPath } alt="" />
             </AlignedSection>
-            { pageContext.recruitment ?
+            { pageContext.info.recruitment ?
                 <div>
                     <Divider />
                     <AlignedSection
                         hasCoverImage={ false }
                         title="Want to Join?"
-                        body={ pageContext.recruitment }
+                        body={ pageContext.info.recruitment }
                     >
                             <Button
-                                text={ pageContext.contactLbl }
-                                href={ "mailto:" + pageContext.contactEmail }
+                                text={ pageContext.info.contactLbl }
+                                href={ "mailto:" + pageContext.info.contactEmail }
                                 height="60"
                                 width="100%"
                             />

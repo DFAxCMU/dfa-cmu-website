@@ -4,14 +4,21 @@ import ProjectCard from "../components/ProjectCard/ProjectCard";
 import { graphql } from "gatsby";
 
 const ArchivedProjects = ({ data }) => {
+  const imgObject = {};
+  data.covers.edges.forEach(edge => {
+    imgObject[edge.node.relativeDirectory] = edge.node.childImageSharp.gatsbyImageData.images.fallback.src;
+  });
+
   return (
     <div>
     <TopBar />
     <div className="project-box">
       { data.allArchivedSummaryCsv.edges.map(edge => {
+        const name = edge.node.ID;
         return (<ProjectCard
-          key={ edge.node.ID }
-          href={ "/" + edge.node.ID }
+          key={ name }
+          href={ "/" + name }
+          coverImg={ imgObject[name] }
           title={ edge.node.title }
           category={ edge.node.category }
           team={ edge.node.team }
@@ -29,7 +36,7 @@ const ArchivedProjects = ({ data }) => {
   export default ArchivedProjects;
   
   export const query = graphql`
-    query Query {
+    query ArchivedQuery {
       allArchivedSummaryCsv {
         edges {
           node {
@@ -38,6 +45,16 @@ const ArchivedProjects = ({ data }) => {
             team
             summary
             ID
+          }
+        }
+      }
+      covers: allFile(filter: {name: {eq: "cover"}}) {
+        edges {
+          node {
+            relativeDirectory
+            childImageSharp {
+              gatsbyImageData(height: 200)
+            }
           }
         }
       }
