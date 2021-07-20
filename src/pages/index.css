@@ -1,12 +1,8 @@
-#index > .aligned-section > .right-section > p {
-    margin-bottom: 50px;
-}
-
-#index > .aligned-section > .right-section > p > a {
+.highlight-link a {
     color: black;
 }
 
-#index > .aligned-section > .right-section > p > a:hover {
+.highlight-link a:hover {
     color: var(--accent-color);
 }
 
