@@ -8,6 +8,7 @@
     }
     .left-section {
         flex: 0 0 40%;
+        max-width: 400px;
     }
 }
 

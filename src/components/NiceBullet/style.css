@@ -1,11 +1,12 @@
 .nice-bullet {
     display: flex;
+    align-items: center;
     margin-top: 10px;
 }
 
 .bullet-img {
-    flex: 0 0 50px;
-    height: 50px;
+    flex: 0 0 100px;
+    height: 100px;
     margin-right: 20px;
 }
 

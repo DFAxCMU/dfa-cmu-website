@@ -1,8 +1,6 @@
 .project-poster {
     display: flex;
-    height: 800px;
     width: 100%;
-    justify-content: center;
 }
 
 .project-page .project-poster img {
@@ -13,4 +11,9 @@
 .project-page .aligned-section img {
     width: 100%;
     height: initial;
+}
+
+img {
+    max-width: 100%; 
+    flex-grow: 1;
 }

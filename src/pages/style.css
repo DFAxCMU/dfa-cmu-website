@@ -43,6 +43,7 @@ h3 {
     font-family: var(--title), var(--title-fallback);
     font-size: 24px;
     font-weight: bold;
+    padding-left: 0px;
 }
 
 h4 {
@@ -69,4 +70,18 @@ p {
 .small-margin {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.contact-box {
+    display:flex;
+    align-items: flex-end;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.socials-contact{
+    margin-bottom: 20px;
+    margin-right: 0px;
 }
