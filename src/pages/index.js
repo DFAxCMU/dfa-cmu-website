@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
                     body="Student-led teams partner closely with local community organizations to identify challenging social issues to design and develop comprehensive solutions that benefit the broader community. We tackle extraordinary challenges in health, economy, education, and environment. "
                     src={ data.b3.childImageSharp.fixed.src }
                 />
-                <p>
+                <p className="highlight-link">
                     <a target="_blank_" href="https://guides.loft.io/dfa-design/">Learn more about the human-centered design process</a> or <a href="/#partners">Learn more about our community partners</a>.
                 </p>
 
