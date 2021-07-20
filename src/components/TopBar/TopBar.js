@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Socials from "../Socials/Socials";
 import "./style.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from "../../images/misc/logo.jpeg";
 
 export default function TopBar(props) {
     return (
@@ -12,7 +12,7 @@ export default function TopBar(props) {
             <div className="top-bar">
                 <a href="/">
                     <div className="logo">
-
+                        <img src={ logo } alt="" />
                     </div>
                 </a>
 

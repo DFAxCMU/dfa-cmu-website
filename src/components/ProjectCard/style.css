@@ -9,9 +9,11 @@
 }
 
 .project-img {
-  background-color: black;
   flex: 0 0 200px;
   height: 200px;
+}
+
+.project-img img {
   border-radius: 35px;
 }
 

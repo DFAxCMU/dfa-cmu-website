@@ -6,15 +6,10 @@ import ProjectTitle from "../ProjectTitle/ProjectTitle.js";
 import ProjectSummary from "../ProjectSummary/ProjectSummary.js";
 import Button from "../Button/Button";
 import "./style.css";
+import poster from "../../images/ymca-changemakers/poster.png";
+import final from "../../images/ymca-changemakers/final.png";
+import sketches from "../../images/ymca-changemakers/sketches.png";
 
-/*
-- contact (first entry: name of button. second entry: href)
-- folder (the folder in images that will hold...
-        - a folder called display, containing 1-2 images/videos
-        - a folder called final, containing 1-4 images/videos
-        - a folder called sketches, containing 1-4 images/videos
-    )
-*/
 export default function MkProjectPage({ pageContext }) {
     return (
         <div className="project-page">
@@ -25,7 +20,7 @@ export default function MkProjectPage({ pageContext }) {
                 category={ pageContext.category }
             />
             <div className="project-poster">
-
+                <img src={ poster } alt="" />
             </div>
             <Divider />
             <AlignedSection
@@ -46,6 +41,7 @@ export default function MkProjectPage({ pageContext }) {
                 title="Final Design"
                 body={ pageContext.final }
             >
+                <img src={ final } alt="" />
             </AlignedSection>
             <Divider />
             <AlignedSection
@@ -53,6 +49,7 @@ export default function MkProjectPage({ pageContext }) {
                 title="Sketches and Idea Explorations"
                 body={ pageContext.sketches }
             >
+                <img src={ sketches } alt="" />
             </AlignedSection>
             { pageContext.recruitment ?
                 <div>

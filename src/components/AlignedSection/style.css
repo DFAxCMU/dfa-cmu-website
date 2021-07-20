@@ -9,9 +9,6 @@
     .left-section {
         flex: 0 0 40%;
     }
-    .right-section {
-        flex: 0 0 60%;
-    }
 }
 
 @media screen and (min-width: 400px) {

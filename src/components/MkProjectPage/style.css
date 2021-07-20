@@ -1,4 +1,4 @@
 .project-poster {
-    background-color: black;
+    background-color: var(--accent-color);
     height: 800px;
 }
