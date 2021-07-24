@@ -8,9 +8,9 @@ import Button from "../Button/Button";
 import "./style.css";
 
 // formats a string to include hyperlinks
-// (selects a word that starts with "https://" and continues to the end of the line)
+// (selects a word that starts with "http" and continues to the end of the line)
 function findLink(formatted, str) {
-    const i = str.search("https://");
+    const i = str.search("http");
 
     if (i >= 0) {
         // found a url at index i
@@ -47,7 +47,7 @@ function formatText(str) {
             formatted.push(<br />);
         } else {
             // otherwise, add an unordered list
-            let lis = bullets.map(bullet => <li>{ bullet }</li>);
+            let lis = bullets.map(bullet => <li>{ findLink([], bullet) }</li>);
             formatted.push(<ul>{ lis }</ul>);
         }
     }
@@ -65,9 +65,9 @@ export default function MkProjectPage({ pageContext }) {
         <div className="project-page">
             <TopBar />
             <ProjectTitle
-                title={ formatText(pageContext.info.title) }
-                timeline={ formatText(pageContext.info.timeline) }
-                category={ formatText(pageContext.info.category) }
+                title={ pageContext.info.title }
+                timeline={ pageContext.info.timeline }
+                category={ pageContext.info.category }
             />
             { posterPath ?
                 <div className="project-poster">
