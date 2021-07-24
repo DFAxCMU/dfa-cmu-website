@@ -7,6 +7,27 @@ import ProjectSummary from "../ProjectSummary/ProjectSummary.js";
 import Button from "../Button/Button";
 import "./style.css";
 
+// formats a string to include hyperlinks
+// (selects a word that starts with "http" and continues to the end of the line)
+function findLink(formatted, str) {
+    const i = str.search("http");
+
+    if (i >= 0) {
+        // found a url at index i
+        formatted.push(str.slice(0, i));
+
+        const url = str.slice(i);
+        formatted.push(<a className="highlight-link" target="_blank_" href={ url }>{ url }</a>);
+
+        return formatted;
+    } else {
+        // didn't find a url
+        formatted.push(str);
+        return formatted;
+    }
+}
+
+// formats a string to include newlines, bullet points, and website links
 function formatText(str) {
     if (str === "") return str;
 
@@ -17,7 +38,8 @@ function formatText(str) {
     for (let line of lines) {
         // make a bullet whenever there's a \b in the string
         let bullets = line.split("\\b");
-        formatted.push(bullets[0]); // first entry isn't a bullet
+
+        formatted = findLink(formatted, bullets[0]); // first entry isn't a bullet
 
         bullets.shift(); // removes the non-bullet
         if (bullets.length == 0) {

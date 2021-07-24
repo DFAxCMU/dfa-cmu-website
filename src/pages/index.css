@@ -1,8 +1,8 @@
-.highlight-link a {
+.highlight-link {
     color: black;
 }
 
-.highlight-link a:hover {
+.highlight-link:hover {
     color: var(--accent-color);
 }
 
