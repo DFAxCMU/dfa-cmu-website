@@ -8,9 +8,9 @@ import Button from "../Button/Button";
 import "./style.css";
 
 // formats a string to include hyperlinks
-// (selects a word that starts with "http" and continues to the end of the line)
+// (selects a word that starts with "https://" and continues to the end of the line)
 function findLink(formatted, str) {
-    const i = str.search("http");
+    const i = str.search("https://");
 
     if (i >= 0) {
         // found a url at index i
