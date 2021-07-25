@@ -27,58 +27,15 @@ const communityStyles = {
 };
 
 /*
-            <AlignedSection
-                hasCoverImage={ true }
-            >
-                <h2>Our <span className="accent">Mission</span></h2>
-                <p>Design For America x CMU is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways. </p>
-                <NiceBullet
-                    title="Human-Centered Design"
-                    body="As a chapter of national DFA, we empathize and work with our users as we research, ideate, prototype, test and develop solutions. "
-                    src={ data.b1.childImageSharp.fixed.src }
-                />
-                <NiceBullet
-                    title="Collaboration"
-                    body="By collaborating in teams of students with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity."
-                    src={ data.b2.childImageSharp.fixed.src }
-                />
-                <NiceBullet
-                    title="Social Good"
-                    body="Student-led teams partner closely with local community organizations to identify challenging social issues to design and develop comprehensive solutions that benefit the broader community. We tackle extraordinary challenges in health, economy, education, and environment. "
-                    src={ data.b3.childImageSharp.fixed.src }
-                />
-                <p>
-                    <a target="_blank_" href="https://guides.loft.io/dfa-design/">Learn more about the human-centered design process</a> or <a href="/#partners">Learn more about our community partners</a>.
-                </p>
-            </AlignedSection>
-            <Divider />
-            <AlignedSection
-                hasCoverImage={ true }
-            >
-                <h2>How to <span className="accent">Join</span></h2>
-                <p>Join our d-list and come to our studio meetings in the fall!</p>
-                <div className="join-buttons">
-                    <Button
-                        text="D-List Sign Up"
-                        href="https://forms.gle/6WQ7a9FkK64cTUZk9"
-                        height="35"
-                        width="250px"
-                    />
-                    <Button
-                        text="Schedule"
-                        href="/schedule"
-                        height="35"
-                        width="250px"
-                    />
-                </div>
-            </AlignedSection>
 */
 
 const IndexPage = ({ data }) => {
     return (
         <div id="index">
             <TopBar />
-            <div style={{width: "800px"}}>
+            <AlignedSection
+                hasCoverImage={ true }
+            >
                 <h2>Our <span className="accent">Mission</span></h2>
                 <p>Design For America x CMU is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways. </p>
                 <NiceBullet
@@ -102,10 +59,11 @@ const IndexPage = ({ data }) => {
                     </p>}
                     img={ <StaticImage src={ b3Img } alt="" /> }
                 />
-
-            </div>
+            </AlignedSection>
             <Divider />
-            <div>
+            <AlignedSection
+                hasCoverImage={ true }
+            >
                 <h2>How to <span className="accent">Join</span></h2>
                 <p>Join our d-list and come to our studio meetings in the fall!</p>
                 <div className="join-buttons">
@@ -122,7 +80,7 @@ const IndexPage = ({ data }) => {
                         width="250px"
                     />
                 </div>
-            </div>
+            </AlignedSection>
             <Divider />
             <h2><span className="accent">Executive</span> Board</h2>
             <div className="profile-box">
