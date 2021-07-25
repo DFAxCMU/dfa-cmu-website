@@ -1,15 +1,23 @@
 .nice-bullet {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .bullet-img {
-    flex: 0 0 100px;
-    height: 100px;
-    margin-right: 20px;
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 20px;
 }
 
 .nice-bullet h3 {
-    margin: 0px;
+  margin: 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .bullet-img {
+    flex: 0 0 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
 }

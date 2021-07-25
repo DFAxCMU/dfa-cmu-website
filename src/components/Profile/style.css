@@ -1,22 +1,23 @@
 .profile {
-    width: 175px;
-    padding: 20px;
+  width: 175px;
+  padding: 20px;
 }
 
 .profile-img {
-    width: 175px;
-    height: 175px;
+  width: 175px;
+  height: 175px;
 }
 
 .name-text {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .role-text {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.class-text, .major-text {
-    margin: 0px;
+.class-text,
+.major-text {
+  margin: 0px;
 }
