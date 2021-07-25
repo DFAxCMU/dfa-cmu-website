@@ -8,14 +8,16 @@ import AlignedSection from "../components/AlignedSection/AlignedSection";
 import Button from "../components/Button/Button";
 import "./style.css";
 import "./index.css";
-import b1Img from "../images/misc/bullet1.png";
-import b2Img from "../images/misc/bullet2.png";
-import b3Img from "../images/misc/bullet3.png";
-import ericaImg from "../images/misc/erica.jpeg";
-import crystalImg from "../images/misc/crystal.jpg";
-import kellyImg from "../images/misc/kelly.jpg";
-import spoorthiImg from "../images/misc/spoorthi.jpg";
-import thienImg from "../images/misc/thien.jpg";
+import { StaticImage } from "gatsby-plugin-image";
+
+const b1Img = "../images/misc/bullet1.png";
+const b2Img = "../images/misc/bullet2.png";
+const b3Img = "../images/misc/bullet3.png";
+const ericaImg = "../images/misc/erica.jpeg";
+const crystalImg = "../images/misc/crystal.jpg";
+const kellyImg = "../images/misc/kelly.jpg";
+const spoorthiImg = "../images/misc/spoorthi.jpg";
+const thienImg = "../images/misc/thien.jpg";
 
 const communityStyles = {
     backgroundColor: "white",
@@ -85,12 +87,12 @@ const IndexPage = ({ data }) => {
                         As a chapter of national DFA, we empathize and work with our users as we research, ideate, prototype, test and develop solutions. Learn more about the human-centered design process&nbsp;
                         <a className="highlight-link" target="_blank_" href="https://guides.loft.io/dfa-design/">here</a>.
                     </p>}
-                    img={ <img src={ b1Img } alt="" /> }
+                    img={ <StaticImage src={ b1Img } alt="" /> }
                 />
                 <NiceBullet
                     title="Collaboration"
                     body="By collaborating in teams of students with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity."
-                    img={ <img src={ b2Img } alt="" /> }
+                    img={ <StaticImage src={ b2Img } alt="" /> }
                 />
                 <NiceBullet
                     title="Social Good"
@@ -98,7 +100,7 @@ const IndexPage = ({ data }) => {
                         Student-led teams partner closely with local community organizations to identify challenging social issues to design and develop comprehensive solutions that benefit the broader community. We tackle extraordinary challenges in health, economy, education, and environment. Learn more about our community partners&nbsp;
                         <a className="highlight-link" href="/#partners">here</a>.
                     </p>}
-                    img={ <img src={ b3Img } alt="" /> }
+                    img={ <StaticImage src={ b3Img } alt="" /> }
                 />
 
             </div>
@@ -129,35 +131,35 @@ const IndexPage = ({ data }) => {
                     name="Erica Fu"
                     class="Sophomore"
                     major="Information Systems"
-                    img={ <img src={ ericaImg } alt="" /> }
+                    img={ <StaticImage src={ ericaImg } alt="" /> }
                 />
                 <Profile
                     role="PR Chair"
                     name="Crystal Lee"
                     class="Junior"
                     major="Computer Science"
-                    img={ <img src={ crystalImg } alt="" /> }
+                    img={ <StaticImage src={ crystalImg } alt="" /> }
                 />
                 <Profile
                     role="Technology Chair"
                     name="Kelly Wang"
                     class="Junior"
                     major="Computer Science"
-                    img={ <img src={ kellyImg } alt="" /> }
+                    img={ <StaticImage src={ kellyImg } alt="" /> }
                 />
                 <Profile
                     role="Project Manager"
                     name="Spoorthi Cherivirala"
                     class="Sophomore"
                     major="Computer Science &amp; Design"
-                    img={ <img src={ spoorthiImg } alt="" /> }
+                    img={ <StaticImage src={ spoorthiImg } alt="" /> }
                 />
                 <Profile
                     role="Design Chair"
                     name="Thien Le"
                     class="Sophomore"
                     major="Design"
-                    img={ <img src={ thienImg } alt="" /> }
+                    img={ <StaticImage src={ thienImg } alt="" /> }
                 />
             </div>
             <Divider />

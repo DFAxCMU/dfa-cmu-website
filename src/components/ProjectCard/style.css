@@ -13,7 +13,7 @@
   height: 200px;
 }
 
-.project-img img {
+.project-img .gatsby-image-wrapper {
   border-radius: 35px;
 }
 

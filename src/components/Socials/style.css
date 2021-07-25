@@ -1,6 +1,7 @@
 .socials {
     display:flex;
     justify-content:flex-end;
+    padding: 6px;
 }
 
 .socials-img {
