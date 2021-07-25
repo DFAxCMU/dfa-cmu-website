@@ -2,6 +2,7 @@ import React from "react";
 import TopBar from "../TopBar/TopBar";
 import Divider from "../Divider/Divider";
 import AlignedSection from "../AlignedSection/AlignedSection";
+import DesignSection from "../DesignSection/DesignSection";
 import ProjectTitle from "../ProjectTitle/ProjectTitle.js";
 import ProjectSummary from "../ProjectSummary/ProjectSummary.js";
 import Button from "../Button/Button";
@@ -29,7 +30,7 @@ function findLink(formatted, str) {
 
 // formats a string to include newlines, bullet points, and website links
 function formatText(str) {
-    if (str === "") return str;
+    if (!str) return str;
 
     // replace \n in the string with <br />
     let formatted = [];
@@ -42,7 +43,7 @@ function formatText(str) {
         formatted = findLink(formatted, bullets[0]); // first entry isn't a bullet
 
         bullets.shift(); // removes the non-bullet
-        if (bullets.length == 0) {
+        if (bullets.length === 0) {
             // if there was only text, no bullets, include a break
             formatted.push(<br />);
         } else {
@@ -55,28 +56,49 @@ function formatText(str) {
     return formatted; 
 }
 
+/*
+            { sketchesPath ?
+                <div>
+                    <AlignedSection
+                        hasCoverImage={ false }
+                        altTitle="Ideate"
+                        subTitle="generate a variety of solutions for meaningful change"
+                        body={ formatText(pageContext.info.sketches) }
+                    >
+                        <img src={ sketchesPath } alt="" />
+                    </AlignedSection>
+                </div>
+                :
+                <div></div>
+            }
+*/
+
 export default function MkProjectPage({ pageContext }) {
     const imgList = pageContext.images.edges.map(edge => edge.node.childImageSharp.gatsbyImageData.images.fallback.src);
     const posterPath = imgList.find((path, index) => path.includes("poster"));
     const finalPath = imgList.find((path, index) => path.includes("final"));
+    const extraPath = imgList.find((path, index) => path.includes("extra"));
     const sketchesPath = imgList.find((path, index) => path.includes("sketches"));
+    const prototypesPath = imgList.find((path, index) => path.includes("prototypes"));
 
     return (
         <div className="project-page">
             <TopBar />
             <ProjectTitle
-                title={ pageContext.info.title }
-                timeline={ pageContext.info.timeline }
-                category={ pageContext.info.category }
+                title={ formatText(pageContext.info.title) }
+                timeline={ formatText(pageContext.info.timeline) }
+                category={ formatText(pageContext.info.category) }
             />
             { posterPath ?
-                <div className="project-poster">
-                    <img src={ posterPath } alt="" />
+                <div>
+                    <div className="project-poster">
+                        <img src={ posterPath } alt="" />
+                    </div>
+                    <Divider />
                 </div>
                 :
                 <div></div>
             }
-            <Divider />
             <AlignedSection
                 hasCoverImage={ false }
                 title="Project Overview"
@@ -89,7 +111,7 @@ export default function MkProjectPage({ pageContext }) {
                     timeline={ formatText(pageContext.info.timeline) }
                 />
             </AlignedSection>
-            { finalPath ?
+            { pageContext.info.final ?
                 <div>
                     <Divider />
                     <AlignedSection
@@ -97,26 +119,63 @@ export default function MkProjectPage({ pageContext }) {
                         title="Final Design"
                         body={ formatText(pageContext.info.final) }
                     >
-                        <img src={ finalPath } alt="" />
+                        { finalPath ?
+                            <img src={ finalPath } alt="" />
+                            :
+                            <div></div>
+                        }
+                        { extraPath ?
+                            <img src={ extraPath } alt="" />
+                            :
+                            <div></div>
+                        }
                     </AlignedSection>
                 </div>
                 :
                 <div></div>
             }
-            { sketchesPath ?
+            { (pageContext.info.howCanWes || pageContext.info.assumptions
+              || pageContext.info.personas || pageContext.info.insights
+              || pageContext.info.howCanWeFinal || pageContext.info.designReqs
+              || sketchesPath || prototypesPath
+              || pageContext.info.quotes || pageContext.info.nextSteps) ?
                 <div>
                     <Divider />
-                    <AlignedSection
-                        hasCoverImage={ false }
-                        title="Sketches and Idea Explorations"
-                        body={ formatText(pageContext.info.sketches) }
-                    >
-                        <img src={ sketchesPath } alt="" />
-                    </AlignedSection>
+                    <h3 className="accent" style={{paddingLeft: "20px"}}>Human-Centered Design Process</h3>
                 </div>
                 :
                 <div></div>
             }
+            <DesignSection
+                designStep="Identify"
+                leftContent={ formatText(pageContext.info.howCanWes) }
+                rightContent={ formatText(pageContext.info.assumptions) }
+            />
+            <DesignSection
+                designStep="Immerse"
+                leftContent={ formatText(pageContext.info.personas) }
+                rightContent={ formatText(pageContext.info.insights) }
+            />
+            <DesignSection
+                designStep="Reframe"
+                leftContent={ formatText(pageContext.info.howCanWeFinal) }
+                rightContent={ formatText(pageContext.info.designReqs) }
+            />
+            <DesignSection
+                designStep="Ideate"
+                leftContent={ formatText(pageContext.info.sketches) }
+                rightContent={ sketchesPath }
+            />
+            <DesignSection
+                designStep="Build"
+                leftContent={ formatText(pageContext.info.prototypes) }
+                rightContent={ prototypesPath }
+            />
+            <DesignSection
+                designStep="Test"
+                leftContent={ formatText(pageContext.info.quotes) }
+                rightContent={ formatText(pageContext.info.nextSteps) }
+            />
             { pageContext.info.recruitment ?
                 <div>
                     <Divider />

@@ -1,0 +1,4 @@
+.design-process-section .left-content, .design-process-section .right-content {
+    flex: 1 1 50%;
+    padding: 20px;
+}

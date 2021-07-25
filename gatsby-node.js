@@ -92,7 +92,16 @@ exports.createPages = ({ graphql, actions }) => {
                                 team
                                 partner
                                 final
+                                howCanWes
+                                assumptions
+                                personas
+                                insights
+                                howCanWeFinal
+                                designReqs
                                 sketches
+                                prototypes
+                                quotes
+                                nextSteps
                                 recruitment
                                 contactLbl
                                 contactEmail
