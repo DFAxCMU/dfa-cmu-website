@@ -5,7 +5,7 @@ export default function NiceBullet(props) {
     return (
         <div className="nice-bullet">
             <div className="bullet-img">
-                <img src={ props.src } alt="" />
+                { props.img }
             </div>
             <div className="bullet-text">
                 <h3 className="accent">{ props.title }</h3>

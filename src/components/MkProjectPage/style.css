@@ -1,19 +1,14 @@
 .project-poster {
     display: flex;
-    width: 100%;
+    justify-content: center;
 }
 
-.project-page .project-poster img {
-    height: 100%;
-    width: initial;
-}
-
-.project-page .aligned-section img {
+.project-page .aligned-section .gatsby-image-wrapper {
     width: 100%;
     height: initial;
 }
 
-img {
+.gatsby-image-wrapper {
     max-width: 100%; 
-    flex-grow: 1;
+    flex-grow: 0;
 }

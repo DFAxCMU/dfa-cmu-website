@@ -1,4 +1,5 @@
 import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
 
 export default function ProjectCard(props) {
@@ -9,7 +10,7 @@ export default function ProjectCard(props) {
         >
             <div className="project-card">
                 <div className="project-img">
-                    <img src={ props.coverImg } alt="" />
+                    <GatsbyImage image={ getImage(props.coverImg) } alt="" />
                 </div>
                 <div className="project-text">
                     <h2 className="accent">{ props.title }</h2>

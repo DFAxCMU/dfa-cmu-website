@@ -5,7 +5,7 @@ export default function Profile(props) {
     return (
         <div className="profile">
             <div className="profile-img">
-                <img src={ props.src } alt="" />
+                { props.img }
             </div>
             <div className="profile-text">
                 <h4 className="accent role-text"><b>{ props.role }</b></h4>

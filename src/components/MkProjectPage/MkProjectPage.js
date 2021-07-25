@@ -6,6 +6,7 @@ import DesignSection from "../DesignSection/DesignSection";
 import ProjectTitle from "../ProjectTitle/ProjectTitle.js";
 import ProjectSummary from "../ProjectSummary/ProjectSummary.js";
 import Button from "../Button/Button";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
 
 // formats a string to include hyperlinks
@@ -56,30 +57,13 @@ function formatText(str) {
     return formatted; 
 }
 
-/*
-            { sketchesPath ?
-                <div>
-                    <AlignedSection
-                        hasCoverImage={ false }
-                        altTitle="Ideate"
-                        subTitle="generate a variety of solutions for meaningful change"
-                        body={ formatText(pageContext.info.sketches) }
-                    >
-                        <img src={ sketchesPath } alt="" />
-                    </AlignedSection>
-                </div>
-                :
-                <div></div>
-            }
-*/
-
 export default function MkProjectPage({ pageContext }) {
-    const imgList = pageContext.images.edges.map(edge => edge.node.childImageSharp.gatsbyImageData.images.fallback.src);
-    const posterPath = imgList.find((path, index) => path.includes("poster"));
-    const finalPath = imgList.find((path, index) => path.includes("final"));
-    const extraPath = imgList.find((path, index) => path.includes("extra"));
-    const sketchesPath = imgList.find((path, index) => path.includes("sketches"));
-    const prototypesPath = imgList.find((path, index) => path.includes("prototypes"));
+    const imgList = pageContext.images.edges;
+    const posterEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("poster"));
+    const finalEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("final"));
+    const extraEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("extra"));
+    const sketchesEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("sketches"));
+    const prototypesEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("prototypes"));
 
     return (
         <div className="project-page">
@@ -89,10 +73,10 @@ export default function MkProjectPage({ pageContext }) {
                 timeline={ formatText(pageContext.info.timeline) }
                 category={ formatText(pageContext.info.category) }
             />
-            { posterPath ?
+            { posterEdge ?
                 <div>
                     <div className="project-poster">
-                        <img src={ posterPath } alt="" />
+                        <GatsbyImage image={ getImage(posterEdge.node) } alt="" />
                     </div>
                     <Divider />
                 </div>
@@ -111,7 +95,7 @@ export default function MkProjectPage({ pageContext }) {
                     timeline={ formatText(pageContext.info.timeline) }
                 />
             </AlignedSection>
-            { pageContext.info.final ?
+            { finalEdge ?
                 <div>
                     <Divider />
                     <AlignedSection
@@ -119,25 +103,30 @@ export default function MkProjectPage({ pageContext }) {
                         title="Final Design"
                         body={ formatText(pageContext.info.final) }
                     >
-                        { finalPath ?
-                            <img src={ finalPath } alt="" />
-                            :
-                            <div></div>
-                        }
-                        { extraPath ?
-                            <img src={ extraPath } alt="" />
+                        <GatsbyImage image={ getImage(finalEdge.node) } alt="" />
+                        { extraEdge ?
+                            <GatsbyImage image={ getImage(extraEdge.node) } alt="" />
                             :
                             <div></div>
                         }
                     </AlignedSection>
                 </div>
                 :
-                <div></div>
+                <div>
+                    <Divider />
+                    <AlignedSection
+                        hasCoverImage={ false }
+                        title="Final Design"
+                    >
+                        <p className="large-body">{ formatText(pageContext.info.final) }</p>
+                    </AlignedSection>
+                </div>
             }
             { (pageContext.info.howCanWes || pageContext.info.assumptions
               || pageContext.info.personas || pageContext.info.insights
               || pageContext.info.howCanWeFinal || pageContext.info.designReqs
-              || sketchesPath || prototypesPath
+              || sketchesEdge || pageContext.info.sketches
+              || prototypesEdge || pageContext.info.prototypes
               || pageContext.info.quotes || pageContext.info.nextSteps) ?
                 <div>
                     <Divider />
@@ -164,12 +153,12 @@ export default function MkProjectPage({ pageContext }) {
             <DesignSection
                 designStep="Ideate"
                 leftContent={ formatText(pageContext.info.sketches) }
-                rightContent={ sketchesPath }
+                rightContent={ sketchesEdge }
             />
             <DesignSection
                 designStep="Build"
                 leftContent={ formatText(pageContext.info.prototypes) }
-                rightContent={ prototypesPath }
+                rightContent={ prototypesEdge }
             />
             <DesignSection
                 designStep="Test"

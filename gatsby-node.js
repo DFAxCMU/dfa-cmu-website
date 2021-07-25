@@ -115,7 +115,7 @@ exports.createPages = ({ graphql, actions }) => {
                             edges {
                                 node {
                                     childImageSharp {
-                                        gatsbyImageData(height: 800)
+                                        gatsbyImageData
                                     }
                                 }
                             }

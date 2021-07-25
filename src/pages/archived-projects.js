@@ -6,7 +6,7 @@ import { graphql } from "gatsby";
 const ArchivedProjects = ({ data }) => {
   const imgObject = {};
   data.covers.edges.forEach(edge => {
-    imgObject[edge.node.relativeDirectory] = edge.node.childImageSharp.gatsbyImageData.images.fallback.src;
+    imgObject[edge.node.relativeDirectory] = edge.node.childImageSharp.gatsbyImageData;
   });
 
   return (

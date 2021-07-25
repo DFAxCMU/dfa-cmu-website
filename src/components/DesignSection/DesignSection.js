@@ -1,5 +1,6 @@
 import React from "react";
 import AlignedSection from "../AlignedSection/AlignedSection";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
 
 const blurbs = {
@@ -56,7 +57,7 @@ export default function DesignSection(props) {
                                 <div className="right-content">
                                     { blurbs[props.designStep].right }
                                     { props.designStep === "Ideate" || props.designStep === "Build" ?
-                                        <img src={ props.rightContent } alt="" />
+                                        <GatsbyImage image={ getImage(props.rightContent.node) } alt="" />
                                         :
                                         <p>{ props.rightContent }</p>
                                     }
