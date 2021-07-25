@@ -8,6 +8,10 @@
   margin: 50px 0px;
 }
 
+.project-card:hover {
+  background-color: white;
+}
+
 .project-img {
   flex: 0 0 200px;
   height: 200px;

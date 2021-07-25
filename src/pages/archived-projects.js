@@ -12,6 +12,7 @@ const ArchivedProjects = ({ data }) => {
   return (
     <div>
     <TopBar />
+    <h2 className="accent">Archived Projects</h2>
     <div className="project-box">
       { data.allArchivedSummaryCsv.edges.map(edge => {
         const name = edge.node.ID;

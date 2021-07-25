@@ -5,6 +5,7 @@ const Schedule = () => {
   return (
     <div>
       <TopBar />
+      <h2 className="accent">Schedule</h2>
       <h2 style={{textAlign: "center"}}>Coming Soon!</h2>
       <div style={{marginBottom: "72px"}}></div>
     </div>
