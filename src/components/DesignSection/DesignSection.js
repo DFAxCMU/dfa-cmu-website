@@ -44,7 +44,7 @@ export default function DesignSection(props) {
                         altTitle={ props.designStep }
                         subTitle={ blurbs[props.designStep].subTitle }
                     >
-                        <div style={{display: "flex"}}>
+                        <div className = "content-wrapper" style={{display: "flex"}}>
                             { props.leftContent ?
                                 <div className="left-content">
                                     { blurbs[props.designStep].left }

@@ -129,14 +129,14 @@ const IndexPage = ({ data }) => {
                 <Button
                     text="D-List Sign Up"
                     href="https://forms.gle/6WQ7a9FkK64cTUZk9"
-                    height="100"
-                    width="350px"
+                    height="35"
+                    width="250px"
                 />
                 <Button
                     text="Erica's Email"
                     href="mailto:efu@andrew.cmu.edu"
-                    height="100"
-                    width="350px"
+                    height="35"
+                    width="250px"
                 />
                 <div className="spacer"></div>
                 <div className="socials-contact">
