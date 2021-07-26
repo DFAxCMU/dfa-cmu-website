@@ -76,7 +76,7 @@ export default function MkProjectPage({ pageContext }) {
             { posterEdge ?
                 <div>
                     <div className="project-poster">
-                        <GatsbyImage image={ getImage(posterEdge.node) } alt="" />
+                        <GatsbyImage image={ getImage(posterEdge.node) } alt="project poster" />
                     </div>
                     <Divider />
                 </div>
@@ -103,9 +103,9 @@ export default function MkProjectPage({ pageContext }) {
                         title="Final Design"
                         body={ formatText(pageContext.info.final) }
                     >
-                        <GatsbyImage image={ getImage(finalEdge.node) } alt="" />
+                        <GatsbyImage image={ getImage(finalEdge.node) } alt="image of the project's final solution" />
                         { extraEdge ?
-                            <GatsbyImage image={ getImage(extraEdge.node) } alt="" />
+                            <GatsbyImage image={ getImage(extraEdge.node) } alt="a second image of the project's final solution" />
                             :
                             <div></div>
                         }

@@ -29,7 +29,7 @@ export default function ProjectCard(props) {
         >
             <div className="project-card">
                 <div className="project-img">
-                    <GatsbyImage image={ getImage(props.coverImg) } alt="" />
+                    <GatsbyImage image={ getImage(props.coverImg) } alt="cover image for project" />
                 </div>
                 { windowDimensions.width < 576 ?
                     <div className="project-text">

@@ -59,12 +59,12 @@ const IndexPage = () => {
                         As a chapter of national DFA, we empathize and work with our users as we research, ideate, prototype, test and develop solutions. Learn more about the human-centered design process&nbsp;
                         <a className="highlight-link" target="_blank_" href="https://guides.loft.io/dfa-design/">here</a>.
                     </p>}
-                    img={ <StaticImage src={ b1Img } alt="" /> }
+                    img={ <StaticImage src={ b1Img } alt="line art of two people" /> }
                 />
                 <NiceBullet
                     title="Collaboration"
                     body="By collaborating in teams of students with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity."
-                    img={ <StaticImage src={ b2Img } alt="" /> }
+                    img={ <StaticImage src={ b2Img } alt="line art of two hands holding a heart" /> }
                 />
                 <NiceBullet
                     title="Social Good"
@@ -72,7 +72,7 @@ const IndexPage = () => {
                         Student-led teams partner closely with local community organizations to identify challenging social issues to design and develop comprehensive solutions that benefit the broader community. We tackle extraordinary challenges in health, economy, education, and environment. Learn more about our community partners&nbsp;
                         <a className="highlight-link" href="/#partners">here</a>.
                     </p>}
-                    img={ <StaticImage src={ b3Img } alt="" /> }
+                    img={ <StaticImage src={ b3Img } alt="line art of a lightbulb" /> }
                 />
             </AlignedSection>
             <Divider />
@@ -104,35 +104,35 @@ const IndexPage = () => {
                     name="Erica Fu"
                     class="Sophomore"
                     major="Information Systems"
-                    img={ <StaticImage src={ ericaImg } alt="" /> }
+                    img={ <StaticImage src={ ericaImg } alt="image of Erica Fu" /> }
                 />
                 <Profile
                     role="PR Chair"
                     name="Crystal Lee"
                     class="Junior"
                     major="Computer Science"
-                    img={ <StaticImage src={ crystalImg } alt="" /> }
+                    img={ <StaticImage src={ crystalImg } alt="image of Crystal Lee" /> }
                 />
                 <Profile
                     role="Technology Chair"
                     name="Kelly Wang"
                     class="Junior"
                     major="Computer Science"
-                    img={ <StaticImage src={ kellyImg } alt="" /> }
+                    img={ <StaticImage src={ kellyImg } alt="image of Kelly Wang" /> }
                 />
                 <Profile
                     role="Project Manager"
                     name="Spoorthi Cherivirala"
                     class="Sophomore"
                     major="Computer Science &amp; Design"
-                    img={ <StaticImage src={ spoorthiImg } alt="" /> }
+                    img={ <StaticImage src={ spoorthiImg } alt="image of Spoorthi Cherivirala" /> }
                 />
                 <Profile
                     role="Design Chair"
                     name="Thien Le"
                     class="Sophomore"
                     major="Design"
-                    img={ <StaticImage src={ thienImg } alt="" /> }
+                    img={ <StaticImage src={ thienImg } alt="image of Thien Le" /> }
                 />
             </div>
             <Divider />

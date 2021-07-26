@@ -57,7 +57,7 @@ export default function DesignSection(props) {
                                 <div className="right-content">
                                     { blurbs[props.designStep].right }
                                     { props.designStep === "Ideate" || props.designStep === "Build" ?
-                                        <GatsbyImage image={ getImage(props.rightContent.node) } alt="" />
+                                        <GatsbyImage image={ getImage(props.rightContent.node) } alt="an image of the project's preliminary ideas or prototypes" />
                                         :
                                         <p>{ props.rightContent }</p>
                                     }
