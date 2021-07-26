@@ -6,7 +6,7 @@ import Socials from "../Socials/Socials";
 import "./style.css";
 
 import { StaticImage } from "gatsby-plugin-image";
-const logo = "../../images/misc/logo.jpeg";
+const logo = "../../images/misc/logo.png";
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;

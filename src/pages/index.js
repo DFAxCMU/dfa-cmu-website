@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import TopBar from "../components/TopBar/TopBar";
 import Socials from "../components/Socials/Socials";
 import NiceBullet from "../components/NiceBullet/NiceBullet";
@@ -19,6 +20,10 @@ const kellyImg = "../images/misc/kelly.jpg";
 const spoorthiImg = "../images/misc/spoorthi.jpg";
 const thienImg = "../images/misc/thien.jpg";
 
+const favicon16 = "../images/misc/favicon16.png";
+const favicon32 = "../images/misc/favicon32.png";
+const favicon64 = "../images/misc/favicon64.png";
+
 const communityStyles = {
     backgroundColor: "white",
     height: "100px",
@@ -26,12 +31,22 @@ const communityStyles = {
     marginTop: "10px"
 };
 
-/*
-*/
-
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
     return (
         <div id="index">
+            <Helmet>
+                <title>Design for America @ CMU</title>
+                <meta
+                    charSet="utf-8"
+                    name="description"
+                    content="The Design for America chapter at Carnegie Mellon University"
+                    link={ [
+                        { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${ favicon16 }` },
+                        { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${ favicon32 }` },
+                        { rel: 'icon', type: 'image/png', sizes: '64x64', href: `${ favicon64 }` }
+                    ] }
+                />
+            </Helmet>
             <TopBar />
             <AlignedSection
                 hasCoverImage={ true }

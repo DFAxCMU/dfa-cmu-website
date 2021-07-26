@@ -130,7 +130,7 @@ export default function MkProjectPage({ pageContext }) {
               || pageContext.info.quotes || pageContext.info.nextSteps) ?
                 <div>
                     <Divider />
-                    <h3 className="accent" style={{paddingLeft: "20px"}}>Human-Centered Design Process</h3>
+                    <h3 className="accent" style={{padding: "20px"}}>Human-Centered Design Process</h3>
                 </div>
                 :
                 <div></div>
