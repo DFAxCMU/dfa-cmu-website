@@ -103,22 +103,24 @@ export default function MkProjectPage({ pageContext }) {
                         title="Want to Join?"
                         body={ formatText(pageContext.info.recruitment) }
                     >
-                        { pageContext.info.contactEmail ?
+                        <div style={{ display: "flex", flexWrap: "wrap" }}>
+                            { pageContext.info.contactEmail ?
+                                <Button
+                                    text={ formatText(pageContext.info.contactLbl) || "Email contact" }
+                                    href={ "mailto:" + pageContext.info.contactEmail }
+                                    height="35"
+                                    width="250px"
+                                />
+                                :
+                                <div></div>
+                            }
                             <Button
-                                text={ formatText(pageContext.info.contactLbl) || "Email contact" }
-                                href={ "mailto:" + pageContext.info.contactEmail }
-                                height="60"
-                                width="100%"
+                                text="DFA D-List Sign Up"
+                                href="https://forms.gle/6WQ7a9FkK64cTUZk9"
+                                height="35"
+                                width="250px"
                             />
-                            :
-                            <div></div>
-                        }
-                        <Button
-                            text="DFA D-List Sign Up"
-                            href="https://forms.gle/6WQ7a9FkK64cTUZk9"
-                            height="60"
-                            width="100%"
-                        />
+                        </div>
                     </AlignedSection>
                 </div>
                 :
@@ -141,6 +143,7 @@ export default function MkProjectPage({ pageContext }) {
                     </AlignedSection>
                 </div>
                 :
+                pageContext.info.final ?
                 <div>
                     <Divider />
                     <AlignedSection
@@ -150,6 +153,8 @@ export default function MkProjectPage({ pageContext }) {
                         <p className="large-body">{ formatText(pageContext.info.final) }</p>
                     </AlignedSection>
                 </div>
+                :
+                <div></div>
             }
             { (pageContext.info.howCanWes || pageContext.info.assumptions
               || pageContext.info.personas || pageContext.info.insights

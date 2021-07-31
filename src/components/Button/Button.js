@@ -17,7 +17,7 @@ export default function Button(props) {
         <a
             href={ props.href }
             target="_blank_"
-            style={{textDecoration: "none"}}
+            style={{ textDecoration: "none" }}
         >
             <div className="button" style={ customButton }>
                 <h5 style={ customHeading }><b>{ props.text }</b></h5>
