@@ -95,6 +95,35 @@ export default function MkProjectPage({ pageContext }) {
                     timeline={ formatText(pageContext.info.timeline) }
                 />
             </AlignedSection>
+            { pageContext.info.recruitment ?
+                <div>
+                    <Divider />
+                    <AlignedSection
+                        hasCoverImage={ false }
+                        title="Want to Join?"
+                        body={ formatText(pageContext.info.recruitment) }
+                    >
+                        { pageContext.info.contactEmail ?
+                            <Button
+                                text={ formatText(pageContext.info.contactLbl) || "Email contact" }
+                                href={ "mailto:" + pageContext.info.contactEmail }
+                                height="60"
+                                width="100%"
+                            />
+                            :
+                            <div></div>
+                        }
+                        <Button
+                            text="DFA D-List Sign Up"
+                            href="https://forms.gle/6WQ7a9FkK64cTUZk9"
+                            height="60"
+                            width="100%"
+                        />
+                    </AlignedSection>
+                </div>
+                :
+                <div></div>
+            }
             { finalEdge ?
                 <div>
                     <Divider />
@@ -165,31 +194,6 @@ export default function MkProjectPage({ pageContext }) {
                 leftContent={ formatText(pageContext.info.quotes) }
                 rightContent={ formatText(pageContext.info.nextSteps) }
             />
-            { pageContext.info.recruitment ?
-                <div>
-                    <Divider />
-                    <AlignedSection
-                        hasCoverImage={ false }
-                        title="Want to Join?"
-                        body={ formatText(pageContext.info.recruitment) }
-                    >
-                            <Button
-                                text={ formatText(pageContext.info.contactLbl) }
-                                href={ "mailto:" + pageContext.info.contactEmail }
-                                height="60"
-                                width="100%"
-                            />
-                        <Button
-                            text="DFA D-List Sign Up"
-                            href="https://forms.gle/6WQ7a9FkK64cTUZk9"
-                            height="60"
-                            width="100%"
-                        />
-                    </AlignedSection>
-                </div>
-                :
-                <div></div>
-            }
             <div style={{marginBottom: "72px"}}></div>
         </div>
     );
