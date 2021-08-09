@@ -1,7 +1,8 @@
 .nice-bullet {
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
   margin-top: 10px;
+  padding: 20px;
 }
 
 .bullet-img {

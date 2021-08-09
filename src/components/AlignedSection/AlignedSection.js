@@ -3,11 +3,11 @@ import "./style.css";
 
 export default function AlignedSection(props) {
     return (
-        <div className="aligned-section">
+        <div className="aligned-section" id={ props.id }>
                 { props.hasCoverImage
                     ? (
                         <div className="left-section">
-
+                            { props.img }
                         </div>
                     )
                     : (

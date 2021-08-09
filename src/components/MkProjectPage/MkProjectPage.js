@@ -101,9 +101,10 @@ export default function MkProjectPage({ pageContext }) {
                     <AlignedSection
                         hasCoverImage={ false }
                         title="Want to Join?"
-                        body={ formatText(pageContext.info.recruitment) }
+                        body=""
                     >
-                        <div style={{ display: "flex", flexWrap: "wrap" }}>
+                        <div className="contact-buttons">
+                            <p>{ formatText(pageContext.info.recruitment) }</p>
                             { pageContext.info.contactEmail ?
                                 <Button
                                     text={ formatText(pageContext.info.contactLbl) || "Email contact" }
@@ -116,7 +117,7 @@ export default function MkProjectPage({ pageContext }) {
                             }
                             <Button
                                 text="DFA D-List Sign Up"
-                                href="https://forms.gle/6WQ7a9FkK64cTUZk9"
+                                href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
                                 height="35"
                                 width="250px"
                             />

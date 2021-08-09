@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import TopBar from "../components/TopBar/TopBar";
 import Socials from "../components/Socials/Socials";
@@ -11,6 +12,8 @@ import "./style.css";
 import "./index.css";
 import { StaticImage } from "gatsby-plugin-image";
 
+const homeImg = "../images/misc/home.png";
+const homeLongImg = "../images/misc/homeLong.png";
 const b1Img = "../images/misc/bullet1.png";
 const b2Img = "../images/misc/bullet2.png";
 const b3Img = "../images/misc/bullet3.png";
@@ -31,7 +34,32 @@ const communityStyles = {
     marginTop: "10px"
 };
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+        width,
+        height
+    };
+}
+/*
+                    <div className="dark-spacer" style={{ width: "90%" }}></div>
+                    <div className="dark-spacer" style={{ width: "90%", backgroundColor: "#e0e0e0" }}></div>
+                    <div className="dark-spacer" style={{ width: "90%", backgroundColor: "#f0f0f0" }}></div>
+                    <div className="dark-spacer" style={{ width: "90%", backgroundColor: "#fafafa" }}></div>
+                    style={{ marginLeft: "40px", marginRight: "40px", textAlign: "center" }}
+*/
 const IndexPage = () => {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div id="index">
             <Helmet>
@@ -50,9 +78,25 @@ const IndexPage = () => {
             <TopBar />
             <AlignedSection
                 hasCoverImage={ true }
+                img={ windowDimensions.width < 800 ?
+                    <StaticImage
+                        src={ homeImg }
+                        alt="drawing of two people with Design for America at Carnegie Mellon University"
+                        className="home-img"
+                    />
+                    :
+                    <div id="home-long">
+                        <StaticImage
+                            src={ homeLongImg }
+                            alt="drawing of two people with Design for America at Carnegie Mellon University"
+                            className="home-img"
+                        />
+                    </div>
+                }
+                id="our-mission"
             >
                 <h2>Our <span className="accent">Mission</span></h2>
-                <p>Design For America x CMU is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways. </p>
+                <p className="large-body" style={{ marginTop: "0px" }}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways. </p>
                 <NiceBullet
                     title="Human-Centered Design"
                     body={ <p>
@@ -75,16 +119,16 @@ const IndexPage = () => {
                     img={ <StaticImage src={ b3Img } alt="line art of a lightbulb" /> }
                 />
             </AlignedSection>
-            <Divider />
             <AlignedSection
                 hasCoverImage={ true }
+                img={ <div></div> }
             >
                 <h2>How to <span className="accent">Join</span></h2>
-                <p>Join our d-list and come to our studio meetings in the fall!</p>
+                <p className="large-body" style={{ marginTop: "0px" }}>Join our d-list and come to our studio meetings in the fall!</p>
                 <div className="join-buttons">
                     <Button
                         text="D-List Sign Up"
-                        href="https://forms.gle/6WQ7a9FkK64cTUZk9"
+                        href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
                         height="35"
                         width="250px"
                     />
@@ -143,7 +187,7 @@ const IndexPage = () => {
             <div className="contact-box">
                 <Button
                     text="D-List Sign Up"
-                    href="https://forms.gle/6WQ7a9FkK64cTUZk9"
+                    href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
                     height="35"
                     width="250px"
                 />
