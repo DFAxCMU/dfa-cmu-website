@@ -3,19 +3,13 @@ import { useState, useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
 
-function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-        width,
-        height
-    };
-}
 export default function ProjectCard(props) {
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
 
     useEffect(() => {
         function handleResize() {
-            setWindowDimensions(getWindowDimensions());
+            const { innerWidth: width, innerHeight: height } = window;
+            setWindowDimensions({ width, height });
         };
 
         window.addEventListener('resize', handleResize);

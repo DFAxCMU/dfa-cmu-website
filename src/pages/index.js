@@ -34,13 +34,6 @@ const communityStyles = {
     marginTop: "10px"
 };
 
-function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-        width,
-        height
-    };
-}
 /*
                     <div className="dark-spacer" style={{ width: "90%" }}></div>
                     <div className="dark-spacer" style={{ width: "90%", backgroundColor: "#e0e0e0" }}></div>
@@ -49,11 +42,12 @@ function getWindowDimensions() {
                     style={{ marginLeft: "40px", marginRight: "40px", textAlign: "center" }}
 */
 const IndexPage = () => {
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
 
     useEffect(() => {
         function handleResize() {
-            setWindowDimensions(getWindowDimensions());
+            const { innerWidth: width, innerHeight: height } = window;
+            setWindowDimensions({ width, height });
         };
 
         window.addEventListener('resize', handleResize);
