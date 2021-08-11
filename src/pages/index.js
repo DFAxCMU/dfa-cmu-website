@@ -57,7 +57,7 @@ const IndexPage = () => {
     return (
         <div id="index">
             <Helmet>
-                <title>Design for America @ CMU</title>
+                <title>DFA @ CMU</title>
                 <meta
                     charSet="utf-8"
                     name="description"
@@ -72,7 +72,7 @@ const IndexPage = () => {
             <TopBar />
             <AlignedSection
                 hasCoverImage={ true }
-                img={ windowDimensions.width < 800 ?
+                img={ windowDimensions.width < 1300 ?
                     <StaticImage
                         src={ homeImg }
                         alt="drawing of two people with Design for America at Carnegie Mellon University"
@@ -81,7 +81,7 @@ const IndexPage = () => {
                     :
                     <div id="home-long">
                         <StaticImage
-                            src={ homeLongImg }
+                            src={ homeImg }
                             alt="drawing of two people with Design for America at Carnegie Mellon University"
                             className="home-img"
                         />
