@@ -14,6 +14,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const homeImg = "../images/misc/home.png";
 const homeLongImg = "../images/misc/homeLong.png";
+const joinImg = "../images/misc/homeJoin.png";
 const b1Img = "../images/misc/bullet1.png";
 const b2Img = "../images/misc/bullet2.png";
 const b3Img = "../images/misc/bullet3.png";
@@ -113,9 +114,16 @@ const IndexPage = () => {
                     img={ <StaticImage src={ b3Img } alt="line art of a lightbulb" /> }
                 />
             </AlignedSection>
+            <Divider />
             <AlignedSection
                 hasCoverImage={ true }
-                img={ <div></div> }
+                img={
+                    <StaticImage
+                        src={ joinImg }
+                        alt="Join us! An image of four people taking to each other"
+                        className="home-img"
+                    />
+                }
             >
                 <h2>How to <span className="accent">Join</span></h2>
                 <p className="large-body" style={{ marginTop: "0px" }}>Join our d-list and come to our studio meetings in the fall!</p>
