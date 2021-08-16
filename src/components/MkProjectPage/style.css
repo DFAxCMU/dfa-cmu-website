@@ -1,9 +1,9 @@
-.project-poster {
+.project-page .project-poster {
     display: flex;
     justify-content: center;
 }
 
-.contact-buttons {
+.project-page .contact-buttons {
     display: flex;
     flex-wrap: wrap;
 }
@@ -11,9 +11,4 @@
 .project-page .aligned-section .gatsby-image-wrapper {
     width: 100%;
     height: initial;
-}
-
-.gatsby-image-wrapper {
-    max-width: 100%; 
-    flex-grow: 0;
 }

@@ -9,7 +9,12 @@ import Button from "../Button/Button";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
 
-// formats a string to include hyperlinks
+/*  MkProjectPage is a component acting as a template for any project page.
+    gatsby-node.js creates a new page for each project that exists in GraphQL,
+    and passes the project information as an object called pageContext.
+*/
+
+// function to format a string to include hyperlinks
 // (selects a word that starts with "http" and continues to the end of the line)
 function findLink(formatted, str) {
     const i = str.search("http");
@@ -29,7 +34,8 @@ function findLink(formatted, str) {
     }
 }
 
-// formats a string to include newlines, bullet points, and website links
+// function to formas a string to include newlines, bullet points, and website
+// links. Used for all text on the project page.
 function formatText(str) {
     if (!str) return str;
 
@@ -58,6 +64,7 @@ function formatText(str) {
 }
 
 export default function MkProjectPage({ pageContext }) {
+    // search for each type of image from the list of images in pageContext
     const imgList = pageContext.images.edges;
     const posterEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("poster"));
     const finalEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("final"));
@@ -81,6 +88,7 @@ export default function MkProjectPage({ pageContext }) {
                     <Divider />
                 </div>
                 :
+                // display nothing if there is no poster image
                 <div></div>
             }
             <AlignedSection
@@ -113,6 +121,7 @@ export default function MkProjectPage({ pageContext }) {
                                     width="250px"
                                 />
                                 :
+                                // display nothing if there is no contact information
                                 <div></div>
                             }
                             <Button
@@ -125,9 +134,12 @@ export default function MkProjectPage({ pageContext }) {
                     </AlignedSection>
                 </div>
                 :
+                // display nothing if there is no recruitment message
                 <div></div>
             }
             { finalEdge ?
+                // if there is an image associated with the final design,
+                // display it
                 <div>
                     <Divider />
                     <AlignedSection
@@ -139,11 +151,14 @@ export default function MkProjectPage({ pageContext }) {
                         { extraEdge ?
                             <GatsbyImage image={ getImage(extraEdge.node) } alt="a second image of the project's final solution" />
                             :
+                            // display nothing if there is no second image
                             <div></div>
                         }
                     </AlignedSection>
                 </div>
                 :
+                // if there isn't an image associated with the final design,
+                // check if there's text associated with it
                 pageContext.info.final ?
                 <div>
                     <Divider />
@@ -155,6 +170,8 @@ export default function MkProjectPage({ pageContext }) {
                     </AlignedSection>
                 </div>
                 :
+                // display nothing if there isn't an image or text associated
+                // with the final design
                 <div></div>
             }
             { (pageContext.info.howCanWes || pageContext.info.assumptions
@@ -168,6 +185,7 @@ export default function MkProjectPage({ pageContext }) {
                     <h3 className="accent" style={{padding: "20px"}}>Human-Centered Design Process</h3>
                 </div>
                 :
+                // display nothing if there is nothing on the design process
                 <div></div>
             }
             <DesignSection

@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+/* A component containing all of DFA's social media links */
+
 export default function Socials(props) {
     return (
         <div className="socials">

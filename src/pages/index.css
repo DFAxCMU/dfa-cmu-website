@@ -1,4 +1,6 @@
-#home-long {
+/* index page style sheet */
+
+#index .home-long-box {
     display: flex;
     align-items: center;
     align-content: center;
@@ -9,43 +11,29 @@
     box-sizing: border-box;
 }
 
-.home-img {
+#index .home-img {
     width: 100%;
     height: initial;
 }
 
-.dark-spacer {
-    background-color: var(--gray);
-    margin-bottom: 20px;
-    margin-top: 20px;
-    height: 4px;
-    border-radius: 20px;
-}
-#our-mission .right-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.highlight-link {
-    color: black;
-}
-
-.highlight-link:hover {
-    color: var(--accent-color);
-}
-
-.join-buttons {
+#index .join-buttons {
     display: flex;
     flex-wrap: wrap;
 }
 
-.profile-box {
+#index .profile-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-.contact-box {
+#index .contact-box {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+#index .socials-contact {
+    margin-bottom: 20px;
+    margin-right: 0px;
 }

@@ -3,7 +3,12 @@ import { useState, useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
 
+/*  a component for a card that displays information about a project and links
+    to the corresponding project page.
+*/
+
 export default function ProjectCard(props) {
+    // Event listener to record the user's screen dimensions
     const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
 
     useEffect(() => {
@@ -26,11 +31,13 @@ export default function ProjectCard(props) {
                     <GatsbyImage image={ getImage(props.coverImg) } alt="cover image for project" />
                 </div>
                 { windowDimensions.width < 576 ?
+                    // if the screen is narrow, display less information
                     <div className="project-text">
                         <h2 className="accent">{ props.title }</h2>
                         <h4>{ props.category }</h4>
                     </div>
                     :
+                    // if the screen is wide, display more information
                     <div className="project-text">
                         <h2 className="accent">{ props.title }</h2>
                         <h4>{ props.category }</h4>

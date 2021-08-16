@@ -3,6 +3,12 @@ import AlignedSection from "../AlignedSection/AlignedSection";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
 
+/*  DesignSection is a component that consistently formats project information
+    about the design process. Each design step is associated with two types of
+    content and the component may be given input for both, one, or neither. 
+*/
+
+// descriptions and formatting for the 6 design steps
 const blurbs = {
     Identify: {
         subTitle: "define target problem spaces",
@@ -44,13 +50,14 @@ export default function DesignSection(props) {
                         altTitle={ props.designStep }
                         subTitle={ blurbs[props.designStep].subTitle }
                     >
-                        <div className = "content-wrapper" style={{display: "flex"}}>
+                        <div className="content-wrapper">
                             { props.leftContent ?
                                 <div className="left-content">
                                     { blurbs[props.designStep].left }
                                     { <p>{ props.leftContent }</p> }
                                 </div>
                                 :
+                                // display nothing if props.leftContent is empty
                                 <div></div>
                             }
                             { props.rightContent ?
@@ -63,12 +70,14 @@ export default function DesignSection(props) {
                                     }
                                 </div>
                                 :
+                                // display nothing if props.rightContent is empty
                                 <div></div>
                             }
                         </div>
                     </AlignedSection>
                 </div>
                 :
+                // display nothing if both props.leftContent and props.rightContent are empty
                 <div></div>
             }
         </div>

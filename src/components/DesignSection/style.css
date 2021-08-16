@@ -1,28 +1,24 @@
-@media screen and (max-width: 800px) {
-    .content-wrapper {
-        display:flex;
-        flex-direction: column;
-    }
-
-    .left-content, .right-content {
-        padding: 0px;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .content-wrapper {
-        display:flex;
-        flex-direction: column;
-    }
-}
+/* DesignSection style sheet */
 
 @media screen and (min-width: 1300px) {
     .design-process-section .left-content, .design-process-section .right-content {
         flex: 1 1 50%;
         padding: 20px;
     }
-    .content-wrapper {
-        display:flex;
+    .design-process-section .content-wrapper {
+        display: flex;
         flex-direction: row;
+    }
+}
+
+/* mobile version: */
+@media screen and (max-width: 800px) {
+    .design-process-section .content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .design-process-section .left-content, .design-process-section .right-content {
+        padding: 0px;
     }
 }

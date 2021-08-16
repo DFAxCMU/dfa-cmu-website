@@ -1,3 +1,5 @@
+/* Button style sheet */
+
 .button {
     background-color: var(--accent-color);
     text-align: center;
@@ -6,8 +8,17 @@
     padding: 20px;
     margin-right: 30px;
     margin-bottom: 30px;
+    height: 35px;
+    width: 250px;
 }
 
 .button:hover {
     filter: brightness(0.9);
+}
+
+.button-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
