@@ -171,8 +171,8 @@ const IndexPage = () => {
                     href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
                 />
                 <Button
-                    text="Erica's Email"
-                    href="mailto:efu@andrew.cmu.edu"
+                    text="Email Contact"
+                    href="mailto:carnegiemellon@designforamerica.com"
                 />
                 <div className="spacer"></div>
                 <div className="socials-contact">
