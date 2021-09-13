@@ -17,7 +17,7 @@ export default function Socials(props) {
                 </div>
             </a>
             <a
-                href="https://www.instagram.com/dfa.cmu/"
+                href="https://www.instagram.com/dfaxcmu/"
                 target="_blank_"
             >
                 <div className="socials-img">
