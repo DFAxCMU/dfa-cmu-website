@@ -22,6 +22,13 @@ const crystalImg = "../images/misc/crystal.jpg";
 const kellyImg = "../images/misc/kelly.jpg";
 const spoorthiImg = "../images/misc/spoorthi.jpg";
 const thienImg = "../images/misc/thien.jpg";
+const foodLogo = "../images/community-partner-logo/412food.jpeg"
+const diningLogo = "../images/community-partner-logo/diningServices.png"
+const obbLogo = "../images/community-partner-logo/obb.png"
+const ymcaLogo = "../images/community-partner-logo/ymca.png"
+
+
+
 
 const favicon16 = "../images/misc/favicon16.png";
 const favicon32 = "../images/misc/favicon32.png";
@@ -175,7 +182,12 @@ const IndexPage = () => {
             </div>
             <Divider />
             <h2 id="partners"><span className="accent">Community</span> Partners</h2>
-            <h3>Coming Soon!</h3>
+            <div className = "community-partner-logos">
+                { <StaticImage src={ foodLogo } alt="logo of 412 Food Rescue" className="logo-spacer" /> }
+                { <StaticImage src={ diningLogo } alt="logo of CMU Dining Services" className="logo-spacer" /> }
+                { <StaticImage src={ obbLogo } alt="logo of Operation Better Block" /> }
+                { <StaticImage src={ ymcaLogo } alt="logo of YMCA" className="logo-spacer"/> }
+            </div>
             <Divider />
             <h2><span className="accent">Contact</span> Us</h2>
             <div className="contact-box">

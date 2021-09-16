@@ -49,3 +49,13 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.community-partner-logos {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.logo-spacer {
+    margin: 30px;
+}
