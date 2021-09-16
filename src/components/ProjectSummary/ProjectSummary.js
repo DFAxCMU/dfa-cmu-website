@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.css";
+
+/* a component to style a project's basic info on a project page */
 
 export default function ProjectSummary(props) {
     return (

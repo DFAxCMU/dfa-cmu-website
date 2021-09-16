@@ -1,3 +1,5 @@
+/* AlignedSection style sheet */
+
 @media screen and (min-width: 1300px) {
     .aligned-section {
         display: flex;
@@ -12,6 +14,7 @@
     }
 }
 
+/* mobile version: */
 @media screen and (min-width: 400px) {
     .left-section, .right-section {
         padding: 20px;

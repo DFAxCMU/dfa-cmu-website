@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+/* a component to format information for an exec board member */
+
 export default function Profile(props) {
     return (
         <div className="profile">

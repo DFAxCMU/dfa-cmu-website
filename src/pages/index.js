@@ -14,6 +14,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const homeImg = "../images/misc/home.png";
 const homeLongImg = "../images/misc/homeLong.png";
+const joinImg = "../images/misc/homeJoin.png";
 const b1Img = "../images/misc/bullet1.png";
 const b2Img = "../images/misc/bullet2.png";
 const b3Img = "../images/misc/bullet3.png";
@@ -30,25 +31,8 @@ const ymcaLogo = "../images/community-partner-logo/ymca.png"
 
 
 
-const favicon16 = "../images/misc/favicon16.png";
-const favicon32 = "../images/misc/favicon32.png";
-const favicon64 = "../images/misc/favicon64.png";
-
-const communityStyles = {
-    backgroundColor: "white",
-    height: "100px",
-    width: "220px",
-    marginTop: "10px"
-};
-
-/*
-                    <div className="dark-spacer" style={{ width: "90%" }}></div>
-                    <div className="dark-spacer" style={{ width: "90%", backgroundColor: "#e0e0e0" }}></div>
-                    <div className="dark-spacer" style={{ width: "90%", backgroundColor: "#f0f0f0" }}></div>
-                    <div className="dark-spacer" style={{ width: "90%", backgroundColor: "#fafafa" }}></div>
-                    style={{ marginLeft: "40px", marginRight: "40px", textAlign: "center" }}
-*/
 const IndexPage = () => {
+    // Event listener to record the user's screen dimensions
     const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
 
     useEffect(() => {
@@ -57,6 +41,7 @@ const IndexPage = () => {
             setWindowDimensions({ width, height });
         };
 
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -69,32 +54,31 @@ const IndexPage = () => {
                     charSet="utf-8"
                     name="description"
                     content="The Design for America chapter at Carnegie Mellon University"
-                    link={ [
-                        { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${ favicon16 }` },
-                        { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${ favicon32 }` },
-                        { rel: 'icon', type: 'image/png', sizes: '64x64', href: `${ favicon64 }` }
-                    ] }
+                    link={[
+                        { rel: 'icon', type: 'image/png', href: `../images/misc/favicon48.png` }
+                    ]}
                 />
             </Helmet>
             <TopBar />
             <AlignedSection
                 hasCoverImage={ true }
                 img={ windowDimensions.width < 1300 ?
+                    // if the screen is narrow, use the wide version of the image
                     <StaticImage
                         src={ homeImg }
                         alt="drawing of two people with Design for America at Carnegie Mellon University"
                         className="home-img"
                     />
                     :
-                    <div id="home-long">
+                    // if the screen is wide, use the tall version of the image
+                    <div className="home-long-box">
                         <StaticImage
-                            src={ homeImg }
+                            src={ homeLongImg }
                             alt="drawing of two people with Design for America at Carnegie Mellon University"
                             className="home-img"
                         />
                     </div>
                 }
-                id="our-mission"
             >
                 <h2>Our <span className="accent">Mission</span></h2>
                 <p className="large-body" style={{ marginTop: "0px" }}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways. </p>
@@ -103,7 +87,7 @@ const IndexPage = () => {
                     body={ <p>
                         As a chapter of national DFA, we empathize and work with our users as we research, ideate, prototype, test and develop solutions. Learn more about the human-centered design process&nbsp;
                         <a className="highlight-link" target="_blank_" href="https://guides.loft.io/dfa-design/">here</a>.
-                    </p>}
+                    </p> }
                     img={ <StaticImage src={ b1Img } alt="line art of two people" /> }
                 />
                 <NiceBullet
@@ -120,9 +104,16 @@ const IndexPage = () => {
                     img={ <StaticImage src={ b3Img } alt="line art of a lightbulb" /> }
                 />
             </AlignedSection>
+            <Divider />
             <AlignedSection
                 hasCoverImage={ true }
-                img={ <div></div> }
+                img={
+                    <StaticImage
+                        src={ joinImg }
+                        alt="Join us! An image of four people taking to each other"
+                        className="home-img"
+                    />
+                }
             >
                 <h2>How to <span className="accent">Join</span></h2>
                 <p className="large-body" style={{ marginTop: "0px" }}>Join our d-list and come to our studio meetings in the fall!</p>
@@ -130,14 +121,10 @@ const IndexPage = () => {
                     <Button
                         text="D-List Sign Up"
                         href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
-                        height="35"
-                        width="250px"
                     />
                     <Button
                         text="Schedule"
                         href="/schedule"
-                        height="35"
-                        width="250px"
                     />
                 </div>
             </AlignedSection>
@@ -194,14 +181,10 @@ const IndexPage = () => {
                 <Button
                     text="D-List Sign Up"
                     href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
-                    height="35"
-                    width="250px"
                 />
                 <Button
-                    text="Erica's Email"
-                    href="mailto:efu@andrew.cmu.edu"
-                    height="35"
-                    width="250px"
+                    text="Email Contact"
+                    href="mailto:carnegiemellon@designforamerica.com"
                 />
                 <div className="spacer"></div>
                 <div className="socials-contact">
