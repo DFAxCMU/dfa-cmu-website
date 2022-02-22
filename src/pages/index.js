@@ -49,7 +49,7 @@ const IndexPage = () => {
     return (
         <div id="index">
             <Helmet>
-                <title>DFA @ CMU</title>
+                <title>Design For America at Carnegie Mellon</title>
                 <meta
                     charSet="utf-8"
                     name="description"
