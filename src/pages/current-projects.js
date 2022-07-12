@@ -14,7 +14,8 @@ const CurrentProjects = ({ data }) => {
     <div>
       <TopBar />
       <h2 className="accent">Current Projects</h2>
-      <div>
+      <h4>Coming soon!</h4>
+      {/* <div>
         { data.allCurrentSummaryCsv.edges.map(edge => {
           const name = edge.node.ID;
           return (<ProjectCard
@@ -27,7 +28,7 @@ const CurrentProjects = ({ data }) => {
             body={ edge.node.summary }
           />);
         }) }
-      </div>
+      </div> */}
       <div style={{marginBottom: "72px"}}></div>
     </div>
   )
