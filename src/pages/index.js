@@ -19,10 +19,11 @@ const b1Img = "../images/misc/bullet1.png";
 const b2Img = "../images/misc/bullet2.png";
 const b3Img = "../images/misc/bullet3.png";
 const ericaImg = "../images/misc/erica.jpeg";
-const crystalImg = "../images/misc/crystal.jpg";
-const kellyImg = "../images/misc/kelly.jpg";
+const tasnimImg = "../images/misc/tasnim.JPG";
+const chelseaImg = "../images/misc/chelsea.jpg";
 const spoorthiImg = "../images/misc/spoorthi.jpg";
 const thienImg = "../images/misc/thien.jpg";
+const jaimieImg = "../images/misc/jaimie.jpg";
 const foodLogo = "../images/community-partner-logo/412food.jpeg"
 const diningLogo = "../images/community-partner-logo/diningServices.png"
 const obbLogo = "../images/community-partner-logo/obb.png"
@@ -134,37 +135,44 @@ const IndexPage = () => {
                 <Profile
                     role="President"
                     name="Erica Fu"
-                    class="Sophomore"
+                    class="Junior"
                     major="Information Systems"
                     img={ <StaticImage src={ ericaImg } alt="image of Erica Fu" /> }
                 />
                 <Profile
                     role="PR Chair"
-                    name="Crystal Lee"
-                    class="Junior"
-                    major="Computer Science"
-                    img={ <StaticImage src={ crystalImg } alt="image of Crystal Lee" /> }
+                    name="Tasnim Rida"
+                    class="Sophomore"
+                    major="Statistics"
+                    img={ <StaticImage src={ tasnimImg } alt="image of Tasnim Rida" /> }
                 />
                 <Profile
                     role="Technology Chair"
-                    name="Kelly Wang"
+                    name="Chelsea Tang"
                     class="Junior"
-                    major="Computer Science"
-                    img={ <StaticImage src={ kellyImg } alt="image of Kelly Wang" /> }
+                    major="Computer Science &amp; Design"
+                    img={ <StaticImage src={ chelseaImg } alt="image of Chelsea Tang" /> }
                 />
                 <Profile
                     role="Project Manager"
                     name="Spoorthi Cherivirala"
-                    class="Sophomore"
+                    class="Junior"
                     major="Computer Science &amp; Design"
                     img={ <StaticImage src={ spoorthiImg } alt="image of Spoorthi Cherivirala" /> }
                 />
                 <Profile
                     role="Design Chair"
                     name="Thien Le"
-                    class="Sophomore"
+                    class="Junior"
                     major="Design"
                     img={ <StaticImage src={ thienImg } alt="image of Thien Le" /> }
+                />
+                <Profile
+                    role="Finance Chair"
+                    name="Jaimie Chan"
+                    class="Junior"
+                    major="Business Administration"
+                    img={ <StaticImage src={ jaimieImg } alt="image of Jaimie Chan" /> }
                 />
             </div>
             <Divider />

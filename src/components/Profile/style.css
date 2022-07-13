@@ -1,13 +1,18 @@
 /* Profile style sheet */
 
 .profile {
-  width: 175px;
+  width: 145px;
   padding: 20px;
 }
 
-.profile-img {
+/* .profile-img {
   width: 175px;
   height: 175px;
+} */
+
+.profile-img {
+  width: 145px;
+  height: 145px;
 }
 
 .name-text {
