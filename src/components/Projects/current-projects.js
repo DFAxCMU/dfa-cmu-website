@@ -1,6 +1,5 @@
 import React from "react";
-import TopBar from "../components/TopBar/TopBar";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
+import ProjectCard from "../ProjectCard/ProjectCard";
 import { graphql } from "gatsby";
 
 const CurrentProjects = ({ data }) => {
@@ -12,7 +11,6 @@ const CurrentProjects = ({ data }) => {
 
   return (
     <div>
-      <TopBar />
       <h2 className="accent">Current Projects</h2>
       <h4>Coming soon!</h4>
       {/* <div>

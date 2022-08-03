@@ -43,10 +43,7 @@ export default function TopBar(props) {
                     <div className="nav-pages">
                         <Nav>
                             <Nav.Link href="/">About</Nav.Link>
-                            <NavDropdown title="Projects">
-                                <NavDropdown.Item href="/current-projects">Current Projects</NavDropdown.Item>
-                                <NavDropdown.Item href="/archived-projects">Archived Projects</NavDropdown.Item>
-                            </NavDropdown>
+                            <Nav.Link href="/projects">Projects</Nav.Link>
                             <Nav.Link href="/schedule">Schedule</Nav.Link>
                             <Nav.Link href="https://www.impactcmu.com" target="_blank_">
                                 ImpactCMU
@@ -82,16 +79,7 @@ export default function TopBar(props) {
                     </svg>
                     <div className="nav-vertical">
                         <Nav.Link href="/">About</Nav.Link>
-                        <Nav.Link onClick={() => setDropdownClicked((!dropdownClicked))}>
-                            Projects
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16" alt="dropdown arrow">
-                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                            </svg>
-                        </Nav.Link>
-                        <div className={dropdownClicked ? 'dropdown dropdown-small active' : 'dropdown dropdown-small'}>
-                            <Nav.Link href="/current-projects">Current Projects</Nav.Link>
-                            <Nav.Link href="/archived-projects">Archived Projects</Nav.Link>
-                        </div>
+                        <Nav.Link href="/projects">Projects</Nav.Link>
                         <Nav.Link href="/schedule">Schedule</Nav.Link>
                         <Nav.Link href="https://www.impactcmu.com" target="_blank_">
                             ImpactCMU
