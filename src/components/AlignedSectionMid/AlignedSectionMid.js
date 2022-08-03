@@ -1,28 +1,28 @@
 import React from "react";
 import "./style.css";
 
-/*  AlignedSection is a component that consistently styles sections with a left
-    and right half splitting the screen in 40%, 60% or to a max of 400px (left side)
+/*  AlignedSectionMid is a component that consistently styles sections with a left
+    and right half spliting the screen in half 50%, 50%
 */
 
-export default function AlignedSection(props) {
+export default function AlignedSectionMid(props) {
     return (
-        <div className="aligned-section" id={ props.id }>
+        <div className="aligned-section-mid" id={ props.id }>
             { props.hasCoverImage ?
                 // If the left side is an image, insert props.img
-                <div className="left-section">
+                <div className="left-section-mid">
                     { props.img }
                 </div>
                 :
                 // Otherwise, insert title and body text
-                <div className="left-section">
+                <div className="left-section-mid">
                     { props.title }
                     { props.altTitle }
                     { props.subTitle }
                     { props.body }
                 </div>
             }
-            <div className="right-section">
+            <div className="right-section-mid">
                 { props.children }
             </div>
         </div>

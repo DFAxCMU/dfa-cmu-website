@@ -5,8 +5,9 @@
 
 :root {
   /* define variables */
-  --accent-color: #c51d2e; /* #c51d2e or #ea9554 */
+  --accent-color: #274184; /* #c51d2e or #ea9554 */
   --secondary-color: #f8f8f8;
+  --lightText-color: white;
   --gray: #cecece;
   --title: "Montserrat";
   --title-fallback: sans-serif;
@@ -68,6 +69,10 @@ h5 {
 p {
   font-family: var(--body), var(--body-fallback);
   font-size: 18px;
+}
+
+.lightText {
+  color: var(--lightText-color);
 }
 
 .small-body {

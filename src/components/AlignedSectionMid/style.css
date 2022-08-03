@@ -1,0 +1,33 @@
+/* AlignedSectionMid style sheet */
+
+@media screen and (min-width: 1300px) {
+    .aligned-section-mid {
+        display: flex;
+        background-color: var(--accent-color);
+    }
+    
+    .left-section-mid, .right-section-mid {
+        padding: 20px;
+    }
+    .left-section-mid {
+        flex: 0 0 50%;
+        max-width: 1000px;
+    }
+
+    .right-section-mid {
+        padding: 20px;
+        order: 2;
+        max-width: 650px;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        margin: 5% 0;
+    }
+}
+
+/* mobile version: */
+@media screen and (min-width: 400px) {
+    .left-section-mid, .right-section-mid {
+        padding: 20px;
+    }
+  }

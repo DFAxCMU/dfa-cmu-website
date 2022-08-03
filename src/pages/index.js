@@ -7,6 +7,8 @@ import NiceBullet from "../components/NiceBullet/NiceBullet";
 import Divider from "../components/Divider/Divider";
 import Profile from "../components/Profile/Profile";
 import AlignedSection from "../components/AlignedSection/AlignedSection";
+import AlignedSectionMid from "../components/AlignedSectionMid/AlignedSectionMid";
+import AlignedSectionRight from "../components/AlignedSectionRight/AlignedSectionRight";
 import Button from "../components/Button/Button";
 import "./style.css";
 import "./index.css";
@@ -61,7 +63,7 @@ const IndexPage = () => {
                 />
             </Helmet>
             <TopBar />
-            <AlignedSection
+            <AlignedSectionMid
                 hasCoverImage={ true }
                 img={ windowDimensions.width < 1300 ?
                     // if the screen is narrow, use the wide version of the image
@@ -81,31 +83,67 @@ const IndexPage = () => {
                     </div>
                 }
             >
-                <h2>Our <span className="accent">Mission</span></h2>
-                <p className="large-body" style={{ marginTop: "0px" }}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways. </p>
-                <NiceBullet
-                    title="Human-Centered Design"
-                    body={ <p>
-                        As a chapter of national DFA, we empathize and work with our users as we research, ideate, prototype, test and develop solutions. Learn more about the human-centered design process&nbsp;
-                        <a className="highlight-link" target="_blank_" href="https://guides.loft.io/dfa-design/">here</a>.
-                    </p> }
-                    img={ <StaticImage src={ b1Img } alt="line art of two people" /> }
-                />
-                <NiceBullet
-                    title="Collaboration"
-                    body="By collaborating in teams of students with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity."
-                    img={ <StaticImage src={ b2Img } alt="line art of two hands holding a heart" /> }
-                />
-                <NiceBullet
-                    title="Social Good"
-                    body={ <p>
-                        Student-led teams partner closely with local community organizations to identify challenging social issues to design and develop comprehensive solutions that benefit the broader community. We tackle extraordinary challenges in health, economy, education, and environment. Learn more about our community partners&nbsp;
-                        <a className="highlight-link" href="/#partners">here</a>.
-                    </p>}
-                    img={ <StaticImage src={ b3Img } alt="line art of a lightbulb" /> }
-                />
-            </AlignedSection>
+              <h2 class="lightText">Interdisciplinary. <br></br> Innovative. <br></br>Kind.</h2>
+                <p class= "lightText" className="large-body" style={{ marginTop: "0px" }}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways.</p>
+            </AlignedSectionMid>
             <Divider />
+            <h2>Our Mission</h2>
+            <AlignedSection
+                hasCoverImage={ false }
+                title = {
+                    <h3>Teach Human-Centered Design</h3>
+                }
+                body= {
+                    <p>As a chapter of national DFA, we teach members the design process and emphasize the importance of empathy and intentional problem solving. 
+                    <br></br><br></br>
+                    Learn more about the human-centered design process </p>
+                }
+            >   
+                    <StaticImage
+                        src={ homeImg }
+                        alt="drawing of two people with Design for America at Carnegie Mellon University"
+                        className="home-img"
+                    />
+            </AlignedSection>
+
+            <Divider />
+
+            <AlignedSectionRight
+                hasCoverImage={ true }
+                img={
+                    <StaticImage
+                        src={ joinImg }
+                        alt="Join us! An image of four people taking to each other"
+                        className="home-img"
+                    />
+                }
+            >
+                <div class="missionCard">
+                <h3>Interdisciplinary Collaboration</h3>
+                <p>By collaborating in teams of students from a variety of majors with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity.</p>
+                </div>
+            </AlignedSectionRight>
+
+            <Divider />
+
+            <AlignedSection
+                hasCoverImage={ false }
+                title = {
+                    <h3>Contribute to Societal Good</h3>
+                }
+                body= {
+                    <p>Student-led teams partner closely with local community organizations. Together, students and organizations identify challenging social issues to design and develop comprehensive solutions that benefit the broader community.</p>
+                }
+            >   
+                    <StaticImage
+                        src={ homeImg }
+                        alt="drawing of two people with Design for America at Carnegie Mellon University"
+                        className="home-img"
+                    />
+            </AlignedSection>
+
+            <Divider />
+
             <AlignedSection
                 hasCoverImage={ true }
                 img={
@@ -130,49 +168,88 @@ const IndexPage = () => {
                 </div>
             </AlignedSection>
             <Divider />
-            <h2><span className="accent">Executive</span> Board</h2>
+            <h2>Our Team</h2>
+            <h3><span className="accent">Executive</span> Board</h3>
             <div className="profile-box">
                 <Profile
                     role="President"
                     name="Erica Fu"
                     class="Junior"
                     major="Information Systems"
-                    img={ <StaticImage src={ ericaImg } alt="image of Erica Fu" /> }
+                    img={ <StaticImage src={ ericaImg } alt="image of Erica Fu" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
                     role="PR Chair"
                     name="Tasnim Rida"
                     class="Sophomore"
                     major="Statistics"
-                    img={ <StaticImage src={ tasnimImg } alt="image of Tasnim Rida" /> }
+                    img={ <StaticImage src={ tasnimImg } alt="image of Tasnim Rida" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
                     role="Technology Chair"
                     name="Chelsea Tang"
                     class="Junior"
                     major="Computer Science &amp; Design"
-                    img={ <StaticImage src={ chelseaImg } alt="image of Chelsea Tang" /> }
+                    img={ <StaticImage src={ chelseaImg } alt="image of Chelsea Tang" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
                     role="Project Manager"
                     name="Spoorthi Cherivirala"
                     class="Junior"
                     major="Computer Science &amp; Design"
-                    img={ <StaticImage src={ spoorthiImg } alt="image of Spoorthi Cherivirala" /> }
+                    img={ <StaticImage src={ spoorthiImg } alt="image of Spoorthi Cherivirala" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
                     role="Design Chair"
                     name="Thien Le"
                     class="Junior"
                     major="Design"
-                    img={ <StaticImage src={ thienImg } alt="image of Thien Le" /> }
+                    img={ <StaticImage src={ thienImg } alt="image of Thien Le" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
                     role="Finance Chair"
                     name="Jaimie Chan"
                     class="Junior"
                     major="Business Administration"
-                    img={ <StaticImage src={ jaimieImg } alt="image of Jaimie Chan" /> }
+                    img={ <StaticImage src={ jaimieImg } alt="image of Jaimie Chan" imgStyle={{ borderRadius: '100%' }}/> }
+                />
+            </div>
+            <h3><span className="accent">Project</span> Leads</h3>
+            <div className="profile-box">
+                <Profile
+                    role="Project Name Lead"
+                    name="Julianna Bolivar"
+                    class="Junior"
+                    major="Design"
+                    img={ <StaticImage src={ ericaImg } alt="image of Erica Fu" imgStyle={{ borderRadius: '100%' }}/> }
+                />
+                <Profile
+                    role="Project Name Lead"
+                    name="Nicole Xiang"
+                    class="Sophomore"
+                    major="Statistics"
+                    img={ <StaticImage src={ tasnimImg } alt="image of Tasnim Rida" imgStyle={{ borderRadius: '100%' }}/> }
+                />
+                <Profile
+                    role="Project Name Lead"
+                    name="Avani Guduri"
+                    class="Junior"
+                    major="Computer Science &amp; Design"
+                    img={ <StaticImage src={ chelseaImg } alt="image of Chelsea Tang" imgStyle={{ borderRadius: '100%' }}/> }
+                />
+                <Profile
+                    role="Project Name Lead"
+                    name="Sherry Chen"
+                    class="Junior"
+                    major="Computer Science &amp; Design"
+                    img={ <StaticImage src={ spoorthiImg } alt="image of Spoorthi Cherivirala" imgStyle={{ borderRadius: '100%' }}/> }
+                />
+                <Profile
+                    role="Project Name Lead"
+                    name="Mari Zhang"
+                    class="Junior"
+                    major="Design"
+                    img={ <StaticImage src={ thienImg } alt="image of Thien Le" imgStyle={{ borderRadius: '100%' }}/> }
                 />
             </div>
             <Divider />
@@ -200,7 +277,12 @@ const IndexPage = () => {
                 </div>
             </div>
             <div style={{marginBottom: "72px"}}></div>
+            <div className = "footer">
+               <h3>Design for America x CMU</h3>
+               <h3>sign up for our D-List</h3>
+           </div>  
         </div>
+   
   )
 };
 

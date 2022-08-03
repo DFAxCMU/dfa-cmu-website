@@ -6,7 +6,7 @@
     align-content: center;
     height: 100%;
     background-color: var(--gray);
-    border: 50px solid white;
+    /* border: 50px solid white; */
     border-style: solid none solid none;
     box-sizing: border-box;
 }
@@ -23,14 +23,14 @@
 
 #index .profile-box {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 #index .contact-box {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .contact-box {
@@ -51,4 +51,12 @@
 #index .socials-contact {
     margin-bottom: 20px;
     margin-right: 0px;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:var(--accent-color);
+    color: white;
 }

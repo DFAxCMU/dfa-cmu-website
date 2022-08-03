@@ -1,0 +1,58 @@
+/* AlignedSectionRight style sheet */
+
+@media screen and (min-width: 1300px) {
+    .aligned-section-right {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 0 0 auto;
+    }
+
+    .left-section-right {
+        padding: 20px;
+        flex: 0 0 60%;
+        max-width: 1000px;
+        order: 1;
+    }
+
+    .right-section-right {
+        padding: 20px;
+        max-width: 1000px;
+        order: 2;
+
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        max-width: 500px;
+        margin: 5% 0;
+        column-gap: 0px;
+    }
+}
+
+/* mobile version: */
+@media screen and (max-width: 1300px) {
+    .aligned-section-right {
+        flex-wrap: wrap;
+        flex-flow: column wrap;
+        -ms-box-orient: vertical;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+  
+        -webkit-flex-flow: column wrap;
+    }
+
+    .right-section-right {
+        flex: 0 0 100%;
+        order: 1;
+        padding: 20px;
+    }
+
+    .left-section-right {
+        flex: 0 0 100%;
+        order: 2;
+        padding: 20px;
+    }
+  }
