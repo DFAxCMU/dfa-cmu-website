@@ -1,10 +1,9 @@
 /* AlignedSectionRight style sheet */
 
 @media screen and (min-width: 1300px) {
+
     .aligned-section-right {
         display: flex;
-        flex-wrap: nowrap;
-        flex: 0 0 auto;
     }
 
     .left-section-right {

@@ -33,6 +33,13 @@
     align-items: flex-start;
 }
 
+.container {
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+    justify-content: space-between;
+}
+
 .contact-box {
     display: flex;
     flex-wrap: wrap;
@@ -53,10 +60,16 @@
     margin-right: 0px;
 }
 
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
+.footer-background {
     background-color:var(--accent-color);
+}
+
+.footer {
+    max-width: 1500px;
+    margin: auto;
+    padding: 50px;
     color: white;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
 }

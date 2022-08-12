@@ -1,0 +1,16 @@
+/* NiceBullet style sheet */
+
+.nice-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    margin-top: 10px;
+  }
+  
+  .nice-button h3 {
+    margin: 0px;
+  }
+  
+  /* mobile version: */
+  @media screen and (max-width: 576px) {
+  }

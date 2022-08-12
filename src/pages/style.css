@@ -2,23 +2,25 @@
 
 /* import Montserrat */
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap);
+/* import Inter and Noto Sans */
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap);
 
 :root {
   /* define variables */
   --accent-color: #274184; /* #c51d2e or #ea9554 */
-  --secondary-color: #f8f8f8;
+  --secondary-color: #708CC3;
   --lightText-color: white;
   --gray: #cecece;
   --title: "Montserrat";
   --title-fallback: sans-serif;
-  --body: Georgia;
+  --body: "Inter";
   --body-fallback: serif;
 
   /* universal properties */
-  margin-left: 72px;
+  /* margin-left: 72px;
   margin-right: 72px;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 5px; */
 }
 
 .accent {
@@ -99,8 +101,8 @@ p {
 /* wide screen */
 @media screen and (min-width: 1500px) {
   :root {
-    margin: auto;
-    max-width: 1500px;
+    /* margin: auto;
+    max-width: 1500px; */
   }
 }
 

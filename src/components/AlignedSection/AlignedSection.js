@@ -8,6 +8,7 @@ import "./style.css";
 export default function AlignedSection(props) {
     return (
         <div className="aligned-section" id={ props.id }>
+            <div className="container">
             { props.hasCoverImage ?
                 // If the left side is an image, insert props.img
                 <div className="left-section">
@@ -24,6 +25,7 @@ export default function AlignedSection(props) {
             }
             <div className="right-section">
                 { props.children }
+            </div>
             </div>
         </div>
     );

@@ -10,6 +10,7 @@ import AlignedSection from "../components/AlignedSection/AlignedSection";
 import AlignedSectionMid from "../components/AlignedSectionMid/AlignedSectionMid";
 import AlignedSectionRight from "../components/AlignedSectionRight/AlignedSectionRight";
 import Button from "../components/Button/Button";
+import NiceButton from "../components/NiceButton/NiceButton";
 import "./style.css";
 import "./index.css";
 import { StaticImage } from "gatsby-plugin-image";
@@ -83,11 +84,13 @@ const IndexPage = () => {
                     </div>
                 }
             >
-              <h2 class="lightText">Interdisciplinary. <br></br> Innovative. <br></br>Kind.</h2>
-                <p class= "lightText" className="large-body" style={{ marginTop: "0px" }}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways.</p>
+              <h2 className="lightText">Interdisciplinary. <br></br> Innovative. <br></br>Kind.</h2>
+                <p className="lightText" style={{padding: "0px"}}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways.</p>
             </AlignedSectionMid>
             <Divider />
-            <h2>Our Mission</h2>
+            <div className="container">
+                <h2 style={{ paddingLeft: "20px" }}>Our Mission</h2>
+            </div>
             <AlignedSection
                 hasCoverImage={ false }
                 title = {
@@ -144,32 +147,56 @@ const IndexPage = () => {
 
             <Divider />
 
-            <AlignedSection
-                hasCoverImage={ true }
-                img={
-                    <StaticImage
-                        src={ joinImg }
-                        alt="Join us! An image of four people taking to each other"
-                        className="home-img"
-                    />
+            <AlignedSectionMid
+                hasCoverImage={ false }
+                title={<h2 class="lightText">How to Join</h2>}
+                leftchildren={
+                    <div className="join-buttons">
+                        <NiceButton 
+                            text="D-List Sign Up"
+                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            body="Join our d-list to get emails about meetings and events"
+                        />
+                        <NiceButton 
+                            text="Schedule"
+                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            body="Come to our studio meetings throughout the school year!"
+                        />
+                        <NiceButton 
+                            text="Instagram"
+                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            body="Follow us on Instagram to follow project teams on their progress"
+                        />
+                    </div>
                 }
             >
-                <h2>How to <span className="accent">Join</span></h2>
-                <p className="large-body" style={{ marginTop: "0px" }}>Join our d-list and come to our studio meetings in the fall!</p>
+                <h2 class="lightText">How to Partner</h2>
                 <div className="join-buttons">
-                    <Button
-                        text="D-List Sign Up"
+                    <NiceButton 
+                        text="Email"
                         href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                        body="Send us an email and we would love to have a conversation!"
                     />
-                    <Button
-                        text="Schedule"
-                        href="/schedule"
+                    <NiceButton 
+                        text="Partner Overview"
+                        href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                        body="View a summary of what a partnership would look like"
+                    />
+                    <NiceButton 
+                        text="Partner Doc"
+                        href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                        body="View a detailed document of what a partnership would look like"
                     />
                 </div>
-            </AlignedSection>
+            </AlignedSectionMid>
             <Divider />
-            <h2>Our Team</h2>
-            <h3><span className="accent">Executive</span> Board</h3>
+            <div className="container">
+                <h2 style={{ paddingLeft: "20px" }}>Our Team</h2>
+            </div>
+            <div className="container">
+                <h3><span className="accent" style={{ paddingLeft: "20px" }}>Executive</span> Board</h3>
+            </div>
+            <div className="container">
             <div className="profile-box">
                 <Profile
                     role="President"
@@ -214,7 +241,11 @@ const IndexPage = () => {
                     img={ <StaticImage src={ jaimieImg } alt="image of Jaimie Chan" imgStyle={{ borderRadius: '100%' }}/> }
                 />
             </div>
-            <h3><span className="accent">Project</span> Leads</h3>
+            </div>
+            <div className="container">
+                <h3><span className="accent" style={{ paddingLeft: "20px" }}>Project</span> Leads</h3>
+            </div>
+            <div className="container">
             <div className="profile-box">
                 <Profile
                     role="Project Name Lead"
@@ -252,35 +283,29 @@ const IndexPage = () => {
                     img={ <StaticImage src={ thienImg } alt="image of Thien Le" imgStyle={{ borderRadius: '100%' }}/> }
                 />
             </div>
-            <Divider />
-            <h2 id="partners"><span className="accent">Community</span> Partners</h2>
-            <div className = "community-partner-logos">
-                { <StaticImage src={ foodLogo } alt="logo of 412 Food Rescue" className="logo-spacer" /> }
-                { <StaticImage src={ diningLogo } alt="logo of CMU Dining Services" className="logo-spacer" /> }
-                { <StaticImage src={ obbLogo } alt="logo of Operation Better Block" /> }
-                { <StaticImage src={ ymcaLogo } alt="logo of YMCA" className="logo-spacer"/> }
             </div>
             <Divider />
-            <h2><span className="accent">Contact</span> Us</h2>
-            <div className="contact-box">
-                <Button
-                    text="D-List Sign Up"
-                    href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
-                />
-                <Button
-                    text="Email Contact"
-                    href="mailto:carnegiemellon@designforamerica.com"
-                />
-                <div className="spacer"></div>
-                <div className="socials-contact">
-                    <Socials />
-                </div>
-            </div>
             <div style={{marginBottom: "72px"}}></div>
-            <div className = "footer">
-               <h3>Design for America x CMU</h3>
-               <h3>sign up for our D-List</h3>
-           </div>  
+            <div className = "footer-background">
+                <div className="footer">
+                    <h3>Design for America x CMU</h3>
+                    <div className="socials-contact">
+                        <Socials />
+                    </div>
+                    <h3>Sign up for our D-List</h3>
+                    <div className="contact-box">
+                    <Button
+                        text="D-List Sign Up"
+                        href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                    />
+                    <Button
+                        text="Email Contact"
+                        href="mailto:carnegiemellon@designforamerica.com"
+                    />
+                    <div className="spacer"></div>
+                    </div>
+                </div>  
+           </div>
         </div>
    
   )

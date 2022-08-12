@@ -1,8 +1,16 @@
 /* AlignedSection style sheet */
 
 @media screen and (min-width: 1300px) {
+
     .aligned-section {
         display: flex;
+    }
+
+    .container {
+        display: flex;
+        max-width: 1500px;
+        margin: auto;
+        justify-content: space-between;
     }
     
     .left-section, .right-section {

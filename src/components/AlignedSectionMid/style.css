@@ -6,12 +6,23 @@
         background-color: var(--accent-color);
     }
     
-    .left-section-mid, .right-section-mid {
+    .left-section-mid, .right-section-mid, .left-section-mid-pic {
         padding: 20px;
     }
-    .left-section-mid {
+
+    .left-section-mid-pic {
         flex: 0 0 50%;
         max-width: 1000px;
+    }
+
+    .left-section-mid {
+        padding: 20px;
+        order: 2;
+        max-width: 650px;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        margin: 5% 0;
     }
 
     .right-section-mid {
@@ -27,7 +38,7 @@
 
 /* mobile version: */
 @media screen and (min-width: 400px) {
-    .left-section-mid, .right-section-mid {
+    .left-section-mid, .left-section-mid-pic, .right-section-mid {
         padding: 20px;
     }
   }
