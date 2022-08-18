@@ -117,21 +117,6 @@ p {
 
 /* mobile version: */
 @media screen and (max-width: 576px) {
-  :root {
-    /* define variables */
-    --accent-color: #c51d2e; /* #c51d2e or #ea9554 */
-    --secondary-color: #f8f8f8;
-    --title: "Montserrat";
-    --title-fallback: sans-serif;
-    --body: Georgia;
-    --body-fallback: serif;
-
-    /* universal properties */
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
 
   h1 {
     font-family: var(--title), var(--title-fallback);
