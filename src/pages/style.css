@@ -17,6 +17,7 @@
   --title-fallback: sans-serif;
   --body: "Inter";
   --body-fallback: serif;
+  --max-width: 1200px;
 
   /* universal properties */
   /* margin-left: 72px;

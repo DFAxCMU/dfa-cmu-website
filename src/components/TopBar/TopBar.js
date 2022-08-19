@@ -35,8 +35,11 @@ export default function TopBar(props) {
                 <div className="navContainer">
                 <div className="top-bar-wide top-bar">
                     <a href="/">
-                        <div className="logo">
-                            <StaticImage src={ logo } alt="logo for Design for America at Carnegie Mellon" loading="eager" />
+                        <div className="logoContainer">
+                            <div className="logo">
+                                <StaticImage src={ logo } alt="logo for Design for America at Carnegie Mellon" loading="eager" />
+                            </div>
+                            <h4 className="name">Design For America x CMU</h4>
                         </div>
                     </a>
                     <Nav className="nav-pages">

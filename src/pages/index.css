@@ -35,7 +35,7 @@
 
 .container {
     display: flex;
-    max-width: 1500px;
+    max-width: var(--max-width);
     margin: auto;
     justify-content: space-between;
 }
@@ -65,7 +65,7 @@
 }
 
 .footer {
-    max-width: 1500px;
+    max-width: var(--max-width);
     margin: auto;
     padding: 50px;
     color: white;
@@ -75,7 +75,7 @@
 }
 
 .projectPage {
-    max-width: 1500px;
+    max-width: var(--max-width);
     margin: auto;
     display: flex;
     flex-direction: row;

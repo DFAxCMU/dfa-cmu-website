@@ -4,12 +4,12 @@
   display: flex;
   margin: 50px 0px;
   flex-direction: column;
-  max-width: 724px;
+  max-width: 624px;
   margin-right:24px;
 }
 
 .project-card .project-img {
-  flex: 0 0 724px;
+  flex: 0 0 624px;
   max-height: 380px;
 }
 
