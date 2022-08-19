@@ -5,13 +5,6 @@
     .aligned-section {
         display: flex;
     }
-
-    .container {
-        display: flex;
-        max-width: 1500px;
-        margin: auto;
-        justify-content: space-between;
-    }
     
     .left-section, .right-section {
         padding: 20px;
