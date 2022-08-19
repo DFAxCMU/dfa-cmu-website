@@ -18,7 +18,7 @@
     .left-section-mid {
         padding: 20px;
         order: 2;
-        max-width: 650px;
+        max-width: 900px;
         display: flex;
         flex-direction:column;
         justify-content: center;
@@ -28,7 +28,6 @@
     .right-section-mid {
         padding: 20px;
         order: 2;
-        max-width: 650px;
         display: flex;
         flex-direction:column;
         justify-content: center;

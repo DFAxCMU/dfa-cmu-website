@@ -1,4 +1,5 @@
 import React from "react";
+import Tag from "../Tag/Tag";
 import { useState, useEffect } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
@@ -30,18 +31,20 @@ export default function ProjectCard(props) {
                 <div className="project-img">
                     <GatsbyImage image={ getImage(props.coverImg) } alt="cover image for project" />
                 </div>
+                <Tag
+                    text= {props.category}
+                />
                 { windowDimensions.width < 576 ?
                     // if the screen is narrow, display less information
                     <div className="project-text">
-                        <h2 className="accent">{ props.title }</h2>
-                        <h4>{ props.category }</h4>
+                        <h3 className="accent">{ props.title }</h3>
                     </div>
                     :
                     // if the screen is wide, display more information
                     <div className="project-text">
-                        <h2 className="accent">{ props.title }</h2>
-                        <h4>{ props.category }</h4>
-                        <h5>{ props.team }</h5>
+                        <h3 className="accent">{ props.title }</h3>
+                        {/* <h4>{ props.category }</h4>
+                        <h5>{ props.team }</h5> */}
                         <p className="small-body">{ props.body }</p>
                     </div>
                 }

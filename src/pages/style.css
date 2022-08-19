@@ -10,6 +10,8 @@
   --accent-color: #274184; /* #c51d2e or #ea9554 */
   --secondary-color: #708CC3;
   --lightText-color: white;
+  --darkText-color: #1A1A1A;
+  --default-color: white;
   --gray: #cecece;
   --title: "Montserrat";
   --title-fallback: sans-serif;

@@ -1,9 +1,17 @@
 /* style sheet for TopBar */
 
-.top-bar-wide {
+.navContainer {
     background-color: var(--accent-color);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.top-bar-wide {
+    max-width: 1500px;
     width: 100%;
-    padding-top: 72px;
+    padding-top: 32px;
+    padding-bottom: 24px;
     font-family: var(--title), var(--title-fallback);
     font-weight: bold;
     font-size: 20px;

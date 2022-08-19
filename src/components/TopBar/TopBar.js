@@ -32,6 +32,7 @@ export default function TopBar(props) {
         { (windowDimensions.width > 688) ? 
             // if the screen is wide, use a classic nav bar
             <Navbar>
+                <div className="navContainer">
                 <div className="top-bar-wide top-bar">
                     <a href="/">
                         <div className="logo">
@@ -49,6 +50,7 @@ export default function TopBar(props) {
                             </svg>
                         </Nav.Link>
                     </Nav>
+                </div>
                 </div>
             </Navbar>
             :

@@ -1,0 +1,17 @@
+/* Button style sheet */
+
+.tag {
+  background-color: var(--secondary-color);
+  display: inline-block;
+  text-align: center;
+  color: white;
+  line-height: 2;
+  padding: 4px 16px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+
+.tag-text {
+  margin-top: 0px;
+}
