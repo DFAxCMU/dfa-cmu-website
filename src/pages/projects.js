@@ -1,6 +1,7 @@
 import React from "react";
 import TopBar from "../components/TopBar/TopBar";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
+import ProjectBar from "../components/ProjectBar/ProjectBar";
 import Tag from "../components/Tag/Tag";
 import { graphql } from "gatsby";
 
@@ -17,6 +18,8 @@ const Projects = ({ data }) => {
       <div className="container">
         <h2 className="accent">Projects</h2>
       </div>
+
+      <ProjectBar />
       
       <div className="projectPage">
         { data.allArchivedSummaryCsv.edges.map(edge => {
