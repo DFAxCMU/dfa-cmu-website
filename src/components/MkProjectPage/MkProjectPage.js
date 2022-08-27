@@ -76,33 +76,26 @@ export default function MkProjectPage({ pageContext }) {
         <div className="project-page">
             <TopBar />
             <ProjectTitle
-                title={ formatText(pageContext.info.title) }
-                timeline={ formatText(pageContext.info.timeline) }
-                category={ formatText(pageContext.info.category) }
-            />
-            { posterEdge ?
-                <div>
-                    <div className="project-poster">
-                        <GatsbyImage image={ getImage(posterEdge.node) } alt="project poster" />
-                    </div>
-                    <Divider />
-                </div>
-                :
-                // display nothing if there is no poster image
-                <div></div>
-            }
-            <AlignedSection
                 hasCoverImage={ false }
-                title="Project Overview"
-                body=""
+                title={ formatText(pageContext.info.title) }
+                category={ formatText(pageContext.info.category) }
+                description={ formatText(pageContext.info.description) }
+                team={ formatText(pageContext.info.team) }
+                partner={ formatText(pageContext.info.partner) }
+                timeline={ formatText(pageContext.info.timeline) }
             >
-                <ProjectSummary
-                    description={ formatText(pageContext.info.description) }
-                    team={ formatText(pageContext.info.team) }
-                    partner={ formatText(pageContext.info.partner) }
-                    timeline={ formatText(pageContext.info.timeline) }
-                />
-            </AlignedSection>
+                { posterEdge ?
+                    <div>
+                        <div className="project-poster">
+                            <GatsbyImage image={ getImage(posterEdge.node) } alt="project poster" />
+                        </div>
+                        <Divider />
+                    </div>
+                    :
+                    // display nothing if there is no poster image
+                    <div></div>
+                }
+            </ProjectTitle>
             { pageContext.info.recruitment ?
                 <div>
                     <Divider />

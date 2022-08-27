@@ -18,6 +18,9 @@
         margin: 5% 0;
         column-gap: 0px;
     }
+    .right-section {
+        flex: 60%;
+    }
 }
 
 /* mobile version: */

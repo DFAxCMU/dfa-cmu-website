@@ -77,8 +77,14 @@
 .projectPage {
     max-width: var(--max-width);
     margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
 }
+
+/* @media screen and (max-width: 992px){
+    .projectPage{
+       grid-template-columns: repeat(2, 1fr);
+    }
+ } */

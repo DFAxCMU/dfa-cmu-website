@@ -16,6 +16,7 @@
     }
 
     .left-section-mid {
+        flex: 50%;
         padding: 20px;
         order: 2;
         max-width: 900px;
@@ -26,6 +27,7 @@
     }
 
     .right-section-mid {
+        flex: 50%;
         padding: 20px;
         order: 2;
         display: flex;
