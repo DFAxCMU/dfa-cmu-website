@@ -14,8 +14,8 @@ export default function NiceButton(props) {
                 text= {props.text}
                 href= {props.href}
                 />
-            <div className="button-text">
-                <h3 className="accent">{ props.title }</h3>
+            <div >
+                {/* <h3 className="accent">{ props.title }</h3> */}
                 { typeof props.body === "string" ? <p className="lightText">{ props.body }</p> : props.body }
             </div>
         </div>

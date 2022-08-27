@@ -1,31 +1,38 @@
 /* AlignedSection style sheet */
 
-@media screen and (min-width: 1300px) {
+.aligned-section-container {
+    display: flex;
+    /* justify-content: center; */
+    gap: 40px;
+}
 
-    .aligned-section {
-        display: flex;
-    }
-    
-    .left-section, .right-section {
-        padding: 20px;
-    }
-    .left-section {
-        flex: 0 0 40%;
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        max-width: 500px;
-        margin: 5% 0;
-        column-gap: 0px;
-    }
-    .right-section {
-        flex: 60%;
-    }
+/* align items to the top for design section, center for home page */
+.design-process-section .aligned-section-container {
+    align-items: flex-start;
+}
+
+.index-aligned-sections .aligned-section-container {
+    align-items: center;
+}
+
+.aligned-section {
+    flex: 0 0 40%;
+    padding: 20px;
+}
+
+.aligned-section-img {
+    max-width: 600px;
+    flex: 60%;
+}
+
+.aligned-section-small {
+    max-width: 200px;
+}
+.aligned-section-big {
+    flex: 60%;
+    /* max-width: 600px; */
 }
 
 /* mobile version: */
 @media screen and (min-width: 400px) {
-    .left-section, .right-section {
-        padding: 20px;
-    }
   }

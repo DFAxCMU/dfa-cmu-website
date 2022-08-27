@@ -2,23 +2,23 @@
 
 @media screen and (min-width: 1300px) {
     .design-process-section .left-content, .design-process-section .right-content {
-        flex: 1 1 50%;
-        padding: 20px;
+        /* flex: 1 1 50%; */
+        /* padding: 20px; */
     }
     .design-process-section .content-wrapper {
-        display: flex;
-        flex-direction: row;
+        /* display: flex; */
+        /* flex-direction: row; */
     }
 }
 
 /* mobile version: */
 @media screen and (max-width: 800px) {
     .design-process-section .content-wrapper {
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
     }
 
     .design-process-section .left-content, .design-process-section .right-content {
-        padding: 0px;
+        /* padding: 0px; */
     }
 }

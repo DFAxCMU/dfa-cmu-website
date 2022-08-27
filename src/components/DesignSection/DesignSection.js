@@ -46,8 +46,8 @@ export default function DesignSection(props) {
             { props.leftContent || props.rightContent ?
                 <div>
                     <AlignedSection
-                        hasCoverImage={ false }
-                        altTitle={ props.designStep }
+                        noImg={ true }
+                        title={ props.designStep }
                         subTitle={ blurbs[props.designStep].subTitle }
                     >
                         <div className="content-wrapper">

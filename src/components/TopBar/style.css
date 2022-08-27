@@ -7,13 +7,17 @@
     justify-content: center;
 }
 
-.top-bar-wide {
+.top-bar {
+    background-color: var(--accent-color);
     max-width: var(--max-width);
+    padding: 20px;
+}
+
+.top-bar-wide {
     width: 100%;
     padding-top: 32px;
     padding-bottom: 24px;
     font-family: var(--title), var(--title-fallback);
-    /* font-weight: bold; */
     font-size: 20px;
     display: flex;
     justify-content: space-between;

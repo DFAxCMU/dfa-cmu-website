@@ -66,91 +66,78 @@ const IndexPage = () => {
             <TopBar />
             <AlignedSectionMid
                 hasCoverImage={ true }
-                img={ windowDimensions.width < 1300 ?
-                    // if the screen is narrow, use the wide version of the image
+                left={ 
                     <StaticImage
                         src={ homeImg }
                         alt="drawing of two people with Design for America at Carnegie Mellon University"
                         className="home-img"
                     />
-                    :
-                    // if the screen is wide, use the tall version of the image
-                    <div className="home-long-box">
-                        <StaticImage
-                            src={ homeLongImg }
-                            alt="drawing of two people with Design for America at Carnegie Mellon University"
-                            className="home-img"
-                        />
-                    </div>
+                }
+                right={
+                    <>
+                    <h2 className="lightText">Interdisciplinary. <br></br> Innovative. <br></br>Kind.</h2>
+                    <p className="lightText" style={{padding: "0px"}}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways.</p>
+                    </>
                 }
             >
-              <h2 className="lightText">Interdisciplinary. <br></br> Innovative. <br></br>Kind.</h2>
-                <p className="lightText" style={{padding: "0px"}}>Design For America @ Carnegie Mellon University is a group of interdisciplinary students who use their unique design, engineering, and social sciences perspectives to confront social issues in innovative ways.</p>
             </AlignedSectionMid>
             <Divider />
             <div className="container">
                 <h2 style={{ paddingLeft: "20px" }}>Our Mission</h2>
             </div>
-            <AlignedSection
-                hasCoverImage={ false }
-                title = {
-                    <h3>Teach Human-Centered Design</h3>
-                }
-                body= {
-                    <p>As a chapter of national DFA, we teach members the design process and emphasize the importance of empathy and intentional problem solving. 
-                    <br></br><br></br>
-                    Learn more about the human-centered design process </p>
-                }
-            >   
-                    <StaticImage
+            <div className="index-aligned-sections">
+                <AlignedSection
+                    imgLeft={ false }
+                    img = {<StaticImage
                         src={ homeImg }
                         alt="drawing of two people with Design for America at Carnegie Mellon University"
                         className="home-img"
-                    />
-            </AlignedSection>
+                    />}
+                    title = "Teach Human-Centered Design"
+                    body= "As a chapter of national DFA, we teach members the design process and emphasize the importance of empathy and intentional problem solving."
+                >   
+                </AlignedSection>
 
-            <Divider />
+                <Divider />
 
-            <AlignedSectionRight
-                hasCoverImage={ true }
-                img={
-                    <StaticImage
-                        src={ joinImg }
-                        alt="Join us! An image of four people taking to each other"
-                        className="home-img"
-                    />
-                }
-            >
-                <div class="missionCard">
-                <h3>Interdisciplinary Collaboration</h3>
-                <p>By collaborating in teams of students from a variety of majors with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity.</p>
-                </div>
-            </AlignedSectionRight>
+                <AlignedSection
+                    imgLeft={ true }
+                    img={
+                        <StaticImage
+                            src={ joinImg }
+                            alt="Join us! An image of four people taking to each other"
+                            className="home-img"
+                        />
+                    }
+                    title="Interdisciplinary Collaboration"
+                    body="By collaborating in teams of students from a variety of majors with diverse backgrounds and interests, we develop well-rounded solutions and fuse collaboration, leadership, and creativity."
+                >
+                </AlignedSection>
 
-            <Divider />
+                <Divider />
 
-            <AlignedSection
-                hasCoverImage={ false }
-                title = {
-                    <h3>Contribute to Societal Good</h3>
-                }
-                body= {
-                    <p>Student-led teams partner closely with local community organizations. Together, students and organizations identify challenging social issues to design and develop comprehensive solutions that benefit the broader community.</p>
-                }
-            >   
-                    <StaticImage
-                        src={ homeImg }
-                        alt="drawing of two people with Design for America at Carnegie Mellon University"
-                        className="home-img"
-                    />
-            </AlignedSection>
+                <AlignedSection
+                    imgLeft={ false }
+                    img={
+                        <StaticImage
+                            src={ homeImg }
+                            alt="drawing of two people with Design for America at Carnegie Mellon University"
+                            className="home-img"
+                        />
+                    }
+                    title = "Contribute to Societal Good"
+                    body= "Student-led teams partner closely with local community organizations. Together, students and organizations identify challenging social issues to design and develop comprehensive solutions that benefit the broader community."
+                >   
+                </AlignedSection>
+            </div>
 
             <Divider />
 
             <AlignedSectionMid
                 hasCoverImage={ false }
-                title={<h2 class="lightText">How to Join</h2>}
-                leftchildren={
+                left= {
+                    <>
+                    <h2 class="lightText">How to Join</h2>
                     <div className="join-buttons">
                         <NiceButton 
                             text="D-List Sign Up"
@@ -168,27 +155,31 @@ const IndexPage = () => {
                             body="Follow us on Instagram to follow project teams on their progress"
                         />
                     </div>
+                    </>
                 }
-            >
-                <h2 class="lightText">How to Partner</h2>
-                <div className="join-buttons">
-                    <NiceButton 
-                        text="Email"
-                        href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
-                        body="Send us an email and we would love to have a conversation!"
-                    />
-                    <NiceButton 
-                        text="Partner Overview"
-                        href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
-                        body="View a summary of what a partnership would look like"
-                    />
-                    <NiceButton 
-                        text="Partner Doc"
-                        href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
-                        body="View a detailed document of what a partnership would look like"
-                    />
-                </div>
-            </AlignedSectionMid>
+                right = {
+                    <>
+                    <h2 class="lightText">How to Partner</h2>
+                    <div className="join-buttons">
+                        <NiceButton 
+                            text="Email"
+                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            body="Send us an email and we would love to have a conversation!"
+                        />
+                        <NiceButton 
+                            text="Partner Overview"
+                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            body="View a summary of what a partnership would look like"
+                        />
+                        <NiceButton 
+                            text="Partner Doc"
+                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            body="View a detailed document of what a partnership would look like"
+                        />
+                    </div>
+                    </>
+                }
+            />
             <Divider />
             <div className="container">
                 <h2 style={{ paddingLeft: "20px" }}>Our Team</h2>

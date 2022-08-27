@@ -119,7 +119,7 @@ p {
 }
 
 /* mobile version: */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 688px) {
 
   h1 {
     font-family: var(--title), var(--title-fallback);

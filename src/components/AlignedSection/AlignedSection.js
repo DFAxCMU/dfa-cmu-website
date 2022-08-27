@@ -7,25 +7,52 @@ import "./style.css";
 
 export default function AlignedSection(props) {
     return (
-        <div className="aligned-section" id={ props.id }>
+        <div id={ props.id }>
             <div className="container">
-            { props.hasCoverImage ?
-                // If the left side is an image, insert props.img
-                <div className="left-section">
-                    { props.img }
+            { props.noImg ? 
+                // If image exists, render image and text from props
+                <div className="aligned-section-container">
+                    <div className="aligned-section aligned-section-small">
+                        {props.title === undefined ? <></> : <h3>{ props.title }</h3>}
+                        { props.altTitle }
+                        {props.subTitle === undefined ? <></> : <h4>{ props.subTitle }</h4>}
+                        { props.body === undefined ? <></> : <p>{ props.body }</p> }
+                    </div>
+                    <div className="aligned-section aligned-section-big">
+                        { props.children }
+                    </div>
                 </div>
                 :
-                // Otherwise, insert title and body text
-                <div className="left-section">
-                    { props.title }
-                    { props.altTitle }
-                    { props.subTitle }
-                    { props.body }
-                </div>
-            }
-            <div className="right-section">
-                { props.children }
-            </div>
+                <>
+                { props.imgLeft ?
+                    // If image is on the left, insert image first
+                    <div className="aligned-section-container">
+                        <div className="aligned-section aligned-section-img">
+                            { props.img }
+                        </div>
+                        <div className="aligned-section">
+                            {props.title === undefined ? <></> : <h3>{ props.title }</h3>}
+                            { props.altTitle }
+                            {props.subTitle === undefined ? <></> : <h4>{ props.subTitle }</h4>}
+                            { props.body === undefined ? <></> : <p>{ props.body }</p> }
+                        </div>
+                    </div>
+                    :
+                    // Otherwise, insert text first then image
+                    <div className="aligned-section-container">
+                        <div className="aligned-section">
+                            {props.title === undefined ? <></> : <h3>{ props.title }</h3>}
+                            { props.altTitle }
+                            {props.subTitle === undefined ? <></> : <h4>{ props.subTitle }</h4>}
+                            { props.body === undefined ? <></> : <p>{ props.body }</p> }
+                        </div>
+                        <div className="aligned-section aligned-section-img">
+                            { props.img }
+                        </div>
+                    </div>
+                    } 
+                    </>
+                }
             </div>
         </div>
     );

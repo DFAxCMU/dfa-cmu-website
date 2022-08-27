@@ -34,7 +34,7 @@ function findLink(formatted, str) {
     }
 }
 
-// function to formas a string to include newlines, bullet points, and website
+// function to format a string to include newlines, bullet points, and website
 // links. Used for all text on the project page.
 function formatText(str) {
     if (!str) return str;
@@ -89,7 +89,6 @@ export default function MkProjectPage({ pageContext }) {
                         <div className="project-poster">
                             <GatsbyImage image={ getImage(posterEdge.node) } alt="project poster" />
                         </div>
-                        <Divider />
                     </div>
                     :
                     // display nothing if there is no poster image
@@ -136,17 +135,19 @@ export default function MkProjectPage({ pageContext }) {
                 <div>
                     <Divider />
                     <AlignedSection
-                        hasCoverImage={ false }
+                        imgLeft={ false }
+                        img={<>
+                            <GatsbyImage image={ getImage(finalEdge.node) } alt="image of the project's final solution" />
+                            { extraEdge ?
+                                <GatsbyImage image={ getImage(extraEdge.node) } alt="a second image of the project's final solution" />
+                                :
+                                // display nothing if there is no second image
+                                <div></div>
+                            }
+                        </>}
                         title="Final Design"
                         body={ formatText(pageContext.info.final) }
                     >
-                        <GatsbyImage image={ getImage(finalEdge.node) } alt="image of the project's final solution" />
-                        { extraEdge ?
-                            <GatsbyImage image={ getImage(extraEdge.node) } alt="a second image of the project's final solution" />
-                            :
-                            // display nothing if there is no second image
-                            <div></div>
-                        }
                     </AlignedSection>
                 </div>
                 :
@@ -175,7 +176,9 @@ export default function MkProjectPage({ pageContext }) {
               || pageContext.info.quotes || pageContext.info.nextSteps) ?
                 <div>
                     <Divider />
-                    <h3 className="accent" style={{padding: "20px"}}>Human-Centered Design Process</h3>
+                    <div className="container">
+                        <h3 className="accent" style={{padding: "20px"}}>Human-Centered Design Process</h3>
+                    </div>
                 </div>
                 :
                 // display nothing if there is nothing on the design process
