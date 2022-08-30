@@ -17,6 +17,13 @@ exports.createPages = ({ graphql, actions }) => {
                                 description
                                 team
                                 partner
+                                processLink
+                                identify
+                                immerse
+                                reframe
+                                ideate
+                                build
+                                test
                                 final
                                 howCanWes
                                 assumptions
