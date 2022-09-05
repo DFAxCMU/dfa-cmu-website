@@ -32,6 +32,9 @@ const chelseaImg = "../images/misc/chelsea.jpg";
 const spoorthiImg = "../images/misc/spoorthi.jpg";
 const thienImg = "../images/misc/thien.jpg";
 const jaimieImg = "../images/misc/jaimie.jpg";
+const avaniImg = "../images/misc/avani.jpg";
+const mariImg = "../images/misc/mari.jpg";
+const juliannaImg = "../images/misc/julianna.jpg";
 const foodLogo = "../images/community-partner-logo/412food.jpeg"
 const diningLogo = "../images/community-partner-logo/diningServices.png"
 const obbLogo = "../images/community-partner-logo/obb.png"
@@ -244,39 +247,33 @@ const IndexPage = () => {
             <div className="container">
             <div className="profile-box">
                 <Profile
-                    role="Project Name Lead"
-                    name="Julianna Bolivar"
-                    class="Junior"
-                    major="Design"
-                    img={ <StaticImage src={ ericaImg } alt="image of Erica Fu" imgStyle={{ borderRadius: '100%' }}/> }
+                    role="Footbridge for Families Lead"
+                    name="Avani Guduri"
+                    class="Sophomore"
+                    major="Cognitive Science + HCI"
+                    img={ <StaticImage src={ avaniImg } alt="image of Avani Guduri" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
-                    role="Project Name Lead"
-                    name="Nicole Xiang"
-                    class="Sophomore"
-                    major="Statistics"
+                    role="HCI Institute at CMU Lead"
+                    name="Sherry Chen"
+                    class="Junior"
+                    major="Information Systems 
+                    + HCI, Design, and CS Minor"
                     img={ <StaticImage src={ tasnimImg } alt="image of Tasnim Rida" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
-                    role="Project Name Lead"
-                    name="Avani Guduri"
-                    class="Junior"
-                    major="Computer Science &amp; Design"
-                    img={ <StaticImage src={ chelseaImg } alt="image of Chelsea Tang" imgStyle={{ borderRadius: '100%' }}/> }
-                />
-                <Profile
-                    role="Project Name Lead"
-                    name="Sherry Chen"
-                    class="Junior"
-                    major="Computer Science &amp; Design"
-                    img={ <StaticImage src={ spoorthiImg } alt="image of Spoorthi Cherivirala" imgStyle={{ borderRadius: '100%' }}/> }
-                />
-                <Profile
-                    role="Project Name Lead"
+                    role="The Hazelwood Initiative Lead"
                     name="Mari Zhang"
+                    class="Sophmore"
+                    major="Business Administration, HCI"
+                    img={ <StaticImage src={ mariImg } alt="image of Mari Zhang" imgStyle={{ borderRadius: '100%' }}/> }
+                />
+                <Profile
+                    role="The Wellness Collective Lead"
+                    name="Julianna Bolivar"
                     class="Junior"
-                    major="Design"
-                    img={ <StaticImage src={ thienImg } alt="image of Thien Le" imgStyle={{ borderRadius: '100%' }}/> }
+                    major="Design + HCI"
+                    img={ <StaticImage src={ juliannaImg } alt="image of Julianna Bolivar" imgStyle={{ borderRadius: '100%' }}/> }
                 />
             </div>
             </div>
