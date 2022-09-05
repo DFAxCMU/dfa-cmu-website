@@ -15,6 +15,11 @@ import "./style.css";
 import "./index.css";
 import { StaticImage } from "gatsby-plugin-image";
 
+const homeBanner = "../images/misc/homeBanner.png";
+const teach = "../images/misc/teach.jpg";
+const collaborate = "../images/misc/collaborate.jpg";
+const contribute = "../images/misc/contribute.JPG";
+
 const homeImg = "../images/misc/home.png";
 const homeLongImg = "../images/misc/homeLong.png";
 const joinImg = "../images/misc/homeJoin.png";
@@ -68,8 +73,8 @@ const IndexPage = () => {
                 hasCoverImage={ true }
                 left={ 
                     <StaticImage
-                        src={ homeImg }
-                        alt="drawing of two people with Design for America at Carnegie Mellon University"
+                        src={ homeBanner }
+                        alt="Drawing of a scottish terrior welcoming you to DFAxCMU"
                         className="home-img"
                     />
                 }
@@ -89,8 +94,8 @@ const IndexPage = () => {
                 <AlignedSection
                     imgLeft={ false }
                     img = {<StaticImage
-                        src={ homeImg }
-                        alt="drawing of two people with Design for America at Carnegie Mellon University"
+                        src={ teach }
+                        alt="drawing of someone with the human-centered design steps around them"
                         className="home-img"
                     />}
                     title = "Teach Human-Centered Design"
@@ -104,8 +109,8 @@ const IndexPage = () => {
                     imgLeft={ true }
                     img={
                         <StaticImage
-                            src={ joinImg }
-                            alt="Join us! An image of four people taking to each other"
+                            src={ collaborate }
+                            alt="Drawing of people from the design, hci, business, and engineering disciplines"
                             className="home-img"
                         />
                     }
@@ -120,8 +125,8 @@ const IndexPage = () => {
                     imgLeft={ false }
                     img={
                         <StaticImage
-                            src={ homeImg }
-                            alt="drawing of two people with Design for America at Carnegie Mellon University"
+                            src={ contribute }
+                            alt="logos of community partners"
                             className="home-img"
                         />
                     }
@@ -146,12 +151,12 @@ const IndexPage = () => {
                         />
                         <NiceButton 
                             text="Schedule"
-                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            href="https://www.dfaxcmu.org/schedule/"
                             body="Come to our studio meetings throughout the school year!"
                         />
                         <NiceButton 
                             text="Instagram"
-                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            href="https://www.instagram.com/dfaxcmu/"
                             body="Follow us on Instagram to follow project teams on their progress"
                         />
                     </div>
@@ -163,17 +168,17 @@ const IndexPage = () => {
                     <div className="join-buttons">
                         <NiceButton 
                             text="Email"
-                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            href="mailto: carnegiemellon@designforamerica.com"
                             body="Send us an email and we would love to have a conversation!"
                         />
                         <NiceButton 
                             text="Partner Overview"
-                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            href="https://drive.google.com/file/d/1PhFUCG3Sop-MuSLc0lYx4YoaoLdrD_Nm/view?usp=sharing"
                             body="View a summary of what a partnership would look like"
                         />
                         <NiceButton 
                             text="Partner Doc"
-                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
+                            href="https://drive.google.com/file/d/1ISb5cXanmW8bEUktGF-PdsurCGDNO6O-/view?usp=sharing"
                             body="View a detailed document of what a partnership would look like"
                         />
                     </div>
