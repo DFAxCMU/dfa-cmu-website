@@ -1,7 +1,12 @@
 /* AlignedSectionMid style sheet */
+
 .aligned-section-mid {
     display: flex;
     background-color: var(--accent-color);
+}
+
+.design-process .aligned-section-mid {
+    background-color: white;
 }
 
 .aligned-section-container {

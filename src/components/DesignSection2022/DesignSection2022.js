@@ -34,7 +34,7 @@ export default function DesignSection2022(props) {
     return (
         <div className="design-process-section-2022">
             { props.leftContent || props.rightContent ?
-                <div>
+                <div className="design-process">
                     <AlignedSectionMid
                         hasCoverImage={ false }
                         left={ <p>{ props.leftContent }</p>
