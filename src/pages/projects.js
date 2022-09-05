@@ -26,6 +26,7 @@ const Projects = ({ data }) => {
             href={ "/" + name }
             coverImg={ imgObject[name] }
             title={ edge.node.title }
+            // timeline={ edge.node.timeline }
             category={ edge.node.category }
             team={ edge.node.team }
             body={ edge.node.summary }

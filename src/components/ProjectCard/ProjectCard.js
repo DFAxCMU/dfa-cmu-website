@@ -32,7 +32,7 @@ export default function ProjectCard(props) {
                     <GatsbyImage image={ getImage(props.coverImg) } alt="cover image for project" />
                 </div>
                 <Tag
-                    text= {props.category}
+                    text= { props.category }
                 />
                 { windowDimensions.width < 576 ?
                     // if the screen is narrow, display less information
