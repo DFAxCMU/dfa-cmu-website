@@ -35,6 +35,7 @@ const jaimieImg = "../images/misc/jaimie.jpg";
 const avaniImg = "../images/misc/avani.jpg";
 const mariImg = "../images/misc/mari.jpg";
 const juliannaImg = "../images/misc/julianna.jpg";
+const profileImg = "../images/misc/profilephoto.png";
 const foodLogo = "../images/community-partner-logo/412food.jpeg"
 const diningLogo = "../images/community-partner-logo/diningServices.png"
 const obbLogo = "../images/community-partner-logo/obb.png"
@@ -259,7 +260,7 @@ const IndexPage = () => {
                     class="Junior"
                     major="Information Systems 
                     + HCI, Design, and CS Minor"
-                    img={ <StaticImage src={ tasnimImg } alt="image of Tasnim Rida" imgStyle={{ borderRadius: '100%' }}/> }
+                    img={ <StaticImage src={ profileImg } alt="empty profile photo" imgStyle={{ borderRadius: '100%' }}/> }
                 />
                 <Profile
                     role="The Hazelwood Initiative Lead"
