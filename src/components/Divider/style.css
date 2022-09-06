@@ -4,10 +4,10 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 60px;
 }
-.divider {
+/* .divider {
     background-color: var(--accent-color);
     width: 100px;
     height: 6px;
-}
+} */

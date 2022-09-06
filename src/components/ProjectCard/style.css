@@ -2,29 +2,23 @@
 
 .project-card {
   display: flex;
-  background-color: var(--secondary-color);
-  border-radius: 35px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 30px;
   margin: 50px 0px;
-}
-
-.project-card:hover {
-  background-color: white;
+  flex-direction: column;
+  max-width: 624px;
+  margin-right:24px;
 }
 
 .project-card .project-img {
-  flex: 0 0 200px;
-  height: 200px;
+  flex: 0 0 624px;
+  max-height: 380px;
 }
 
-.project-card .gatsby-image-wrapper {
-  border-radius: 35px;
-}
+/* .project-card .gatsby-image-wrapper {
+  
+} */
 
 .project-card .project-text {
-  color: black;
-  margin-left: 40px;
+  color: var(--darkText-color);
   line-height: 6px;
 }
 

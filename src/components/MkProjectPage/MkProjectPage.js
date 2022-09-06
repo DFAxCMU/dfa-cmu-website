@@ -3,11 +3,13 @@ import TopBar from "../TopBar/TopBar";
 import Divider from "../Divider/Divider";
 import AlignedSection from "../AlignedSection/AlignedSection";
 import DesignSection from "../DesignSection/DesignSection";
+import DesignSection2022 from "../DesignSection2022/DesignSection2022";
 import ProjectTitle from "../ProjectTitle/ProjectTitle.js";
 import ProjectSummary from "../ProjectSummary/ProjectSummary.js";
 import Button from "../Button/Button";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./style.css";
+import AlignedSectionMid from "../AlignedSectionMid/AlignedSectionMid";
 
 /*  MkProjectPage is a component acting as a template for any project page.
     gatsby-node.js creates a new page for each project that exists in GraphQL,
@@ -72,37 +74,30 @@ export default function MkProjectPage({ pageContext }) {
     const sketchesEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("sketches"));
     const prototypesEdge = imgList.find((edge, index) => edge.node.childImageSharp.gatsbyImageData.images.fallback.src.includes("prototypes"));
 
-    return (
+    return ( 
         <div className="project-page">
             <TopBar />
             <ProjectTitle
-                title={ formatText(pageContext.info.title) }
-                timeline={ formatText(pageContext.info.timeline) }
-                category={ formatText(pageContext.info.category) }
-            />
-            { posterEdge ?
-                <div>
-                    <div className="project-poster">
-                        <GatsbyImage image={ getImage(posterEdge.node) } alt="project poster" />
-                    </div>
-                    <Divider />
-                </div>
-                :
-                // display nothing if there is no poster image
-                <div></div>
-            }
-            <AlignedSection
                 hasCoverImage={ false }
-                title="Project Overview"
-                body=""
+                title={ formatText(pageContext.info.title) }
+                category={ formatText(pageContext.info.category) }
+                description={ formatText(pageContext.info.description) }
+                team={ formatText(pageContext.info.team) }
+                partner={ formatText(pageContext.info.partner) }
+                timeline={ formatText(pageContext.info.timeline) }
             >
-                <ProjectSummary
-                    description={ formatText(pageContext.info.description) }
-                    team={ formatText(pageContext.info.team) }
-                    partner={ formatText(pageContext.info.partner) }
-                    timeline={ formatText(pageContext.info.timeline) }
-                />
-            </AlignedSection>
+                { posterEdge ?
+                    <div>
+                        <div className="project-poster">
+                            <GatsbyImage image={ getImage(posterEdge.node) } alt="project poster" />
+                        </div>
+                        <Divider />
+                    </div>
+                    :
+                    // display nothing if there is no poster image
+                    <div></div>
+                }
+            </ProjectTitle>
             { pageContext.info.recruitment ?
                 <div>
                     <Divider />
@@ -182,12 +177,70 @@ export default function MkProjectPage({ pageContext }) {
               || pageContext.info.quotes || pageContext.info.nextSteps) ?
                 <div>
                     <Divider />
-                    <h3 className="accent" style={{padding: "20px"}}>Human-Centered Design Process</h3>
+                    <div className="container">
+                        <h3 className="accent" style={{padding: "20px"}}>Human-Centered Design Process</h3>
+                    </div>
                 </div>
                 :
                 // display nothing if there is nothing on the design process
                 <div></div>
             }
+
+            { pageContext.info.processLink ?
+                <div>
+                    <div className="container">
+                        <Button
+                            text={ "In Depth Process" }
+                            href={ pageContext.info.processLink }
+                        />
+                    </div>
+                </div>
+                :
+                // display nothing if there isn't an image or text associated
+                // with the final design
+                <div></div>
+            }
+
+            { pageContext.info.identify ?
+                <div>
+                    <DesignSection2022
+                        designStep="Identify"
+                        leftContent={ formatText(pageContext.info.howCanWes) }
+                        rightContent={ formatText(pageContext.info.identify) }
+                    />
+                    <DesignSection2022
+                        designStep="Immerse"
+                        leftContent={ formatText(pageContext.info.howCanWes) }
+                        rightContent={ formatText(pageContext.info.immerse) }
+                    />
+                    <DesignSection2022
+                        designStep="Reframe"
+                        leftContent={ formatText(pageContext.info.howCanWes) }
+                        rightContent={ formatText(pageContext.info.reframe) }
+                    />
+                    <DesignSection2022
+                        designStep="Ideate"
+                        leftContent={ formatText(pageContext.info.howCanWes) }
+                        rightContent={ formatText(pageContext.info.ideate) }
+                    />
+                    <DesignSection
+                        designStep="Build"
+                        leftContent={ formatText(pageContext.info.howCanWes) }
+                        rightContent={ formatText(pageContext.info.build) }
+                    />
+                    <DesignSection
+                        designStep="Test"
+                        leftContent={ formatText(pageContext.info.howCanWes) }
+                        rightContent={ formatText(pageContext.info.test) }
+                    />
+                </div>
+                :
+                // display nothing if there isn't an image or text associated
+                // with the final design
+                <div>
+                </div>
+            }
+
             <DesignSection
                 designStep="Identify"
                 leftContent={ formatText(pageContext.info.howCanWes) }
@@ -221,4 +274,5 @@ export default function MkProjectPage({ pageContext }) {
             <div style={{marginBottom: "72px"}}></div>
         </div>
     );
+
 }

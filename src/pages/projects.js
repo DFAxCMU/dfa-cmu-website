@@ -1,9 +1,10 @@
 import React from "react";
 import TopBar from "../components/TopBar/TopBar";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
+import Tag from "../components/Tag/Tag";
 import { graphql } from "gatsby";
 
-const CurrentProjects = ({ data }) => {
+const Projects = ({ data }) => {
   // formatting for the image data retrieved from GraphQL
   const imgObject = {};
   data.covers.edges.forEach(edge => {
@@ -13,33 +14,37 @@ const CurrentProjects = ({ data }) => {
   return (
     <div>
       <TopBar />
-      <h2 className="accent">Current Projects</h2>
-      <h4>Coming soon!</h4>
-      {/* <div>
-        { data.allCurrentSummaryCsv.edges.map(edge => {
+      <div className="container">
+        <h2 className="accent">Projects</h2>
+      </div>
+      
+      <div className="projectPage">
+        { data.allArchivedSummaryCsv.edges.map(edge => {
           const name = edge.node.ID;
           return (<ProjectCard
             key={ name }
             href={ "/" + name }
             coverImg={ imgObject[name] }
             title={ edge.node.title }
+            // timeline={ edge.node.timeline }
             category={ edge.node.category }
             team={ edge.node.team }
             body={ edge.node.summary }
+            // date= { edge.node.date }
           />);
         }) }
-      </div> */}
+      </div>
       <div style={{marginBottom: "72px"}}></div>
     </div>
   )
 };
-
-export default CurrentProjects;
-
+  
+export default Projects;
+  
 // get information about current projects and their cover images
 export const query = graphql`
-  query CurrentQuery {
-    allCurrentSummaryCsv {
+  query ArchivedQuery {
+    allArchivedSummaryCsv {
       edges {
         node {
           title

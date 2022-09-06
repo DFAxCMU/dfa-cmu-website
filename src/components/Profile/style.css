@@ -1,8 +1,8 @@
 /* Profile style sheet */
 
 .profile {
-  width: 145px;
-  padding: 20px;
+  width: 165px;
+  padding: 20px 30px;
 }
 
 /* .profile-img {
@@ -11,8 +11,8 @@
 } */
 
 .profile-img {
-  width: 145px;
-  height: 145px;
+  width: 165px;
+  height: 165px;
 }
 
 .name-text {
