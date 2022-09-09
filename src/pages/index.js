@@ -149,9 +149,9 @@ const IndexPage = () => {
                     <h2 class="lightText">How to Join</h2>
                     <div className="join-buttons">
                         <NiceButton 
-                            text="D-List Sign Up"
-                            href="https://lists.andrew.cmu.edu/mailman/listinfo/dfa-cmu-2021"
-                            body="Join our d-list to get emails about meetings and events"
+                            text="Sign Up on TartanConnect"
+                            href="https://tartanconnect.cmu.edu/DFA/club_signup"
+                            body="Join TartanConnect to get emails about meetings and events"
                         />
                         <NiceButton 
                             text="Schedule"
